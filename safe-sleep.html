@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safe Sleep Essentials — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+background:#F5F1EB;
+color:#2f2a26;
+}
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* NAV */
+.nav{
+padding:24px 40px;
+display:flex;
+align-items:center;
+gap:12px;
+}
+.nav-back{
+font-size:14px;
+color:#6a615a;
+display:flex;
+align-items:center;
+gap:6px;
+transition:color .2s;
+}
+.nav-back:hover{
+color:#2f2a26;
+}
+.nav-back svg{
+width:16px;
+height:16px;
+}
+.nav-logo{
+font-family:'Cormorant Garamond', serif;
+font-size:22px;
+font-weight:600;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 40px 120px;
+}
+h1{
+font-family:'Cormorant Garamond', serif;
+font-size:52px;
+margin-bottom:20px;
+}
+.intro{
+font-size:19px;
+line-height:1.7;
+margin-bottom:80px;
+color:#4b433d;
+max-width:800px;
+}
+
+/* COMPARISON */
+.comparison{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-bottom:100px;
+}
+.product{
+background:#fff;
+border-radius:30px;
+padding:35px;
+box-shadow:0 18px 45px rgba(0,0,0,0.07);
+text-align:center;
+}
+.product img{
+width:100%;
+border-radius:20px;
+margin-bottom:25px;
+}
+.product h3{
+margin-bottom:15px;
+font-size:20px;
+}
+.product ul{
+text-align:left;
+margin-bottom:30px;
+color:#5c524a;
+line-height:1.6;
+padding-left:20px;
+}
+.btn{
+display:inline-block;
+background:#C4D0C1;
+padding:16px 32px;
+border-radius:16px;
+font-weight:600;
+text-decoration:none;
+color:#2f2a26;
+transition:all .25s ease;
+}
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+.section{
+margin-top:100px;
+}
+.section h2{
+font-family:'Cormorant Garamond', serif;
+font-size:40px;
+margin-bottom:25px;
+}
+.section p{
+line-height:1.8;
+color:#5c524a;
+font-size:18px;
+max-width:800px;
+}
+
+@media(max-width:900px){
+.comparison{
+grid-template-columns:1fr;
+}
+h1{
+font-size:38px;
+}
+.nav{
+padding:20px;
+}
+.container{
+padding:30px 20px 80px;
+}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10 3L5 8l5 5"/>
+</svg>
+Back
+</a>
+<span style="color:#d0c8c0;">|</span>
+<a class="nav-logo" href="index.html">Little Haven</a>
+</nav>
+
+<div class="container">
+<h1>Best Safe Sleep Essentials for Modern Nurseries</h1>
+<p class="intro">
+Expert-reviewed cribs, breathable mattresses, and monitoring solutions designed to create a calm and safe sleep environment for your baby.
+</p>
+
+<div class="comparison">
+<div class="product">
+<img src="https://i.postimg.cc/Ssgdt9D8/3.png" alt="Best overall crib">
+<h3>Best Overall Crib</h3>
+<ul>
+<li>Greenguard Gold Certified materials</li>
+<li>Sturdy solid wood construction</li>
+<li>Minimal, modern nursery design</li>
+</ul>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+
+<div class="product">
+<img src="https://i.postimg.cc/Qtfmn701/5.png" alt="Best breathable mattress">
+<h3>Best Breathable Mattress</h3>
+<ul>
+<li>Breathable core for airflow</li>
+<li>Firm infant support</li>
+<li>Easy-clean removable cover</li>
+</ul>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+
+<div class="product">
+<img src="https://i.postimg.cc/3Rt1bGnC/4.png" alt="Best baby monitor">
+<h3>Best Baby Monitor</h3>
+<ul>
+<li>HD video with night vision</li>
+<li>Secure encrypted connection</li>
+<li>Two-way audio communication</li>
+</ul>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+</div>
+
+<div class="section">
+<h2>What to Look for in Safe Sleep Essentials</h2>
+<p>
+When selecting safe sleep products, prioritize firm surfaces, breathable materials, and products that meet current pediatric safety guidelines. Avoid loose bedding and ensure cribs and mattresses fit properly without gaps.
+</p>
+</div>
+</div>
+
+</body>
+</html>
