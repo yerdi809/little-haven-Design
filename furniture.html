@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursery Furniture — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;}
+body{
+margin:0;
+font-family:'Inter', sans-serif;
+background:#F5F1EB;
+color:#2f2a26;
+}
+a{
+text-decoration:none;
+color:inherit;
+}
+
+/* NAV */
+.nav{
+padding:24px 40px;
+display:flex;
+align-items:center;
+gap:12px;
+}
+.nav-back{
+font-size:14px;
+color:#6a615a;
+display:flex;
+align-items:center;
+gap:6px;
+transition:color .2s;
+}
+.nav-back:hover{
+color:#2f2a26;
+}
+.nav-back svg{
+width:16px;
+height:16px;
+}
+.nav-logo{
+font-family:'Cormorant Garamond', serif;
+font-size:22px;
+font-weight:600;
+}
+
+.container{
+max-width:1100px;
+margin:auto;
+padding:40px 40px 100px;
+}
+h1{
+font-family:'Cormorant Garamond', serif;
+font-size:48px;
+margin-bottom:10px;
+}
+.intro{
+font-size:18px;
+color:#5c524a;
+margin-bottom:60px;
+line-height:1.7;
+max-width:800px;
+}
+
+/* PRODUCT GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:40px;
+margin-bottom:90px;
+}
+.product{
+background:#fff;
+border-radius:26px;
+padding:25px;
+box-shadow:0 15px 35px rgba(0,0,0,0.08);
+text-align:center;
+}
+.product img{
+width:100%;
+border-radius:18px;
+margin-bottom:20px;
+}
+.product h3{
+margin-bottom:10px;
+font-size:18px;
+}
+.product p{
+font-size:14px;
+color:#6b6158;
+margin-bottom:20px;
+line-height:1.6;
+}
+.btn{
+display:inline-block;
+background:#C4D0C1;
+padding:12px 26px;
+border-radius:14px;
+font-weight:600;
+color:#2f2a26;
+text-decoration:none;
+transition:all .25s ease;
+}
+.btn:hover{
+transform:translateY(-4px);
+box-shadow:0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* INFO SECTION */
+.info-section{
+margin-top:60px;
+}
+.info-section h2{
+font-family:'Cormorant Garamond', serif;
+font-size:36px;
+margin-bottom:20px;
+}
+.info-section p{
+color:#5c524a;
+line-height:1.8;
+max-width:750px;
+font-size:18px;
+}
+
+@media(max-width:900px){
+.grid{
+grid-template-columns:1fr;
+}
+h1{
+font-size:36px;
+}
+.nav{
+padding:20px;
+}
+.container{
+padding:30px 20px 80px;
+}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+<path d="M10 3L5 8l5 5"/>
+</svg>
+Back
+</a>
+<span style="color:#d0c8c0;">|</span>
+<a class="nav-logo" href="index.html">Little Haven</a>
+</nav>
+
+<div class="container">
+<h1>Best Nursery Furniture for Modern Parents</h1>
+<p class="intro">
+Comfortable and functional nursery furniture designed to create a calm, organized space for your baby. These essential pieces help parents build a peaceful nursery while keeping everything practical and within reach.
+</p>
+
+<div class="grid">
+<div class="product">
+<img src="https://via.placeholder.com/600x800" alt="Best nursery chair">
+<h3>Best Nursery Chair</h3>
+<p>Comfortable glider chair designed for feeding, bonding, and relaxing moments with your baby.</p>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/600x800" alt="Best changing table">
+<h3>Best Changing Table</h3>
+<p>Modern changing table with storage space to keep essentials organized and within reach.</p>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+
+<div class="product">
+<img src="https://via.placeholder.com/600x800" alt="Best nursery dresser">
+<h3>Best Nursery Dresser</h3>
+<p>Minimal modern dresser designed to store baby clothes while matching your nursery style.</p>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+</div>
+
+<div class="info-section">
+<h2>What to Look for in Nursery Furniture</h2>
+<p>
+When choosing nursery furniture, prioritize safety, durability, and comfort. Look for sturdy materials, smooth finishes, and furniture designed specifically for nursery environments. Pieces like gliders, dressers, and changing tables should combine functionality with calming design to support both parents and babies during daily routines.
+</p>
+</div>
+</div>
+
+</body>
+</html>
