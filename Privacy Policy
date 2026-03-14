@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:800px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:60px;}
+.page-header h1{
+font-family:'Cormorant Garamond', serif;
+font-size:48px;line-height:1.15;margin-bottom:16px;
+}
+.page-header p{font-size:16px;color:#8a8076;}
+.policy-body{
+background:#fff;border-radius:28px;
+padding:60px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+.policy-body h2{
+font-family:'Cormorant Garamond', serif;
+font-size:28px;margin-bottom:16px;margin-top:40px;
+}
+.policy-body h2:first-child{margin-top:0;}
+.policy-body p{
+font-size:16px;color:#5c524a;
+line-height:1.8;margin-bottom:16px;
+}
+.policy-body ul{
+margin:0 0 16px 20px;
+color:#5c524a;
+}
+.policy-body ul li{
+font-size:16px;line-height:1.8;margin-bottom:6px;
+}
+.highlight{
+background:#F5F1EB;
+border-left:3px solid #C4D0C1;
+padding:20px 24px;
+border-radius:0 12px 12px 0;
+margin:24px 0;
+font-size:15px;color:#2f2a26;line-height:1.7;
+}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.policy-body{padding:32px 24px;}
+.page-header h1{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+Back
+</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+<div class="page-header">
+<h1>Privacy Policy</h1>
+<p>Last updated: 2025</p>
+</div>
+
+<div class="policy-body">
+
+<div class="highlight">
+Little Haven is committed to protecting your privacy. This policy explains what information we collect, how we use it, and your rights as a visitor to this site.
+</div>
+
+<h2>Information we collect</h2>
+<p>
+Little Haven is a content and recommendation website. We do not require you to create an account or submit any personal information to use this site.
+</p>
+<p>We may collect non-personal information automatically, including:</p>
+<ul>
+<li>Pages visited and time spent on the site</li>
+<li>Browser type and device information</li>
+<li>Referring website or search terms used to find us</li>
+<li>General geographic location (country or region)</li>
+</ul>
+<p>
+This information is collected anonymously through standard web analytics tools and is used solely to improve the site experience.
+</p>
+
+<h2>Cookies</h2>
+<p>
+This site may use cookies — small text files stored on your device — to understand how visitors use the site. You can disable cookies in your browser settings at any time without affecting your ability to use this site.
+</p>
+
+<h2>Third-party links</h2>
+<p>
+Little Haven contains links to third-party websites, including Amazon. When you click these links and visit those sites, their own privacy policies apply. We encourage you to read the privacy policy of any site you visit.
+</p>
+<p>
+We are not responsible for the privacy practices or content of any third-party websites.
+</p>
+
+<h2>Amazon Associates</h2>
+<p>
+Little Haven participates in the Amazon Services LLC Associates Program. As part of this program, Amazon may use cookies to track purchases made through our affiliate links. Amazon's privacy policy governs how they collect and use that data. You can review Amazon's privacy policy at amazon.com.
+</p>
+
+<h2>How we use your information</h2>
+<p>Any non-personal data we collect is used only to:</p>
+<ul>
+<li>Understand which content is most helpful to visitors</li>
+<li>Improve site performance and user experience</li>
+<li>Analyze traffic patterns to grow the site</li>
+</ul>
+<p>
+We do not sell, trade, or transfer any information to outside parties.
+</p>
+
+<h2>Children's privacy</h2>
+<p>
+Little Haven does not knowingly collect any information from children under the age of 13. This site is intended for adult parents and caregivers.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+We may update this privacy policy from time to time. Any changes will be posted on this page with an updated date. Continued use of the site after changes are posted constitutes your acceptance of the updated policy.
+</p>
+
+<h2>Contact</h2>
+<p>
+If you have any questions about this privacy policy, please visit our <a href="contact.html" style="color:#2f2a26;text-decoration:underline;">Contact page</a>.
+</p>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">
+As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>
