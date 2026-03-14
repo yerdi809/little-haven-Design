@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Safe Sleep Essentials — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:1100px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:50px;}
+.badge{
+display:inline-block;background:#C4D0C1;color:#2f2a26;
+font-size:11px;font-weight:600;padding:5px 14px;
+border-radius:20px;margin-bottom:16px;
+letter-spacing:0.05em;text-transform:uppercase;
+}
+.page-header h1{
+font-family:'Cormorant Garamond', serif;
+font-size:52px;line-height:1.15;margin-bottom:16px;
+}
+.page-header p{font-size:18px;line-height:1.7;color:#4b433d;max-width:780px;}
+.affiliate-note{
+font-size:13px;color:#8a8076;
+margin-bottom:40px;
+padding:12px 18px;
+background:#eee8e0;
+border-radius:10px;
+display:inline-block;
+}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:80px;}
+.product{
+background:#fff;border-radius:28px;overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.07);
+transition:all .3s ease;display:flex;flex-direction:column;
+}
+.product:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,0.11);}
+.product-image img{width:100%;height:auto;display:block;transition:transform .4s ease;}
+.product:hover .product-image img{transform:scale(1.03);}
+.product-body{padding:28px;flex:1;display:flex;flex-direction:column;}
+.product-rank{font-size:11px;font-weight:600;color:#8a9e87;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;}
+.product-body h3{font-size:20px;font-weight:600;margin-bottom:6px;}
+.product-brand{font-size:12px;color:#8a8076;margin-bottom:14px;}
+.product-body p{font-size:14px;color:#5c524a;line-height:1.65;margin-bottom:18px;flex:1;}
+.product-features{list-style:none;padding:0;margin:0 0 24px 0;}
+.product-features li{
+font-size:13px;color:#5c524a;padding:7px 0;
+border-bottom:1px solid #f0ece4;
+display:flex;align-items:center;gap:8px;
+}
+.product-features li:last-child{border-bottom:none;}
+.product-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C4D0C1;flex-shrink:0;}
+.why-section{margin-bottom:80px;}
+.compare-section h2{font-family:'Cormorant Garamond', serif;font-size:36px;margin-bottom:28px;}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.products{grid-template-columns:1fr;}
+.page-header h1{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+Back
+</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+<div class="page-header">
+<div class="badge">Editor's Choice 2025</div>
+<!-- EDITAR: título -->
+<h1>Best Safe Sleep Essentials for Modern Nurseries</h1>
+<!-- EDITAR: descripción -->
+<p>Expert-reviewed cribs, breathable mattresses, and monitoring solutions carefully selected to create a calm, safe sleep environment for your baby.</p>
+</div>
+
+<!-- AFFILIATE NOTE — NO BORRAR -->
+<div class="affiliate-note">
+Our recommendations include affiliate links — you pay the same price on Amazon, we may earn a small commission.
+</div>
+
+<div class="products">
+
+<!-- EDITAR: Producto 1 -->
+<div class="product">
+<div class="product-image">
+<img src="https://i.postimg.cc/Ssgdt9D8/3.png" alt="Best overall crib">
+</div>
+<div class="product-body">
+<div class="product-rank">#1 Best Overall</div>
+<h3>Best Overall Crib</h3>
+<div class="product-brand">Greenguard Gold Certified</div>
+<p>A beautifully crafted solid wood crib that meets the highest safety standards while complementing any modern nursery aesthetic.</p>
+<ul class="product-features">
+<li>Greenguard Gold Certified materials</li>
+<li>Sturdy solid wood construction</li>
+<li>Converts to toddler bed</li>
+<li>Minimal, modern nursery design</li>
+</ul>
+<!-- EDITAR: reemplaza # con tu link de afiliado de Amazon -->
+<a class="btn-dark" href="#">View on Amazon</a>
+</div>
+</div>
+
+<!-- EDITAR: Producto 2 -->
+<div class="product">
+<div class="product-image">
+<img src="https://i.postimg.cc/Qtfmn701/5.png" alt="Best breathable mattress">
+</div>
+<div class="product-body">
+<div class="product-rank">#2 Best Mattress</div>
+<h3>Best Breathable Mattress</h3>
+<div class="product-brand">Pediatrician Recommended</div>
+<p>A firm, breathable mattress designed with a dual-sided design — one side for infants, one for toddlers — for long-lasting safety and value.</p>
+<ul class="product-features">
+<li>Breathable core for airflow</li>
+<li>Firm infant support surface</li>
+<li>Easy-clean removable cover</li>
+<li>Dual-sided infant and toddler</li>
+</ul>
+<!-- EDITAR: reemplaza # con tu link de afiliado de Amazon -->
+<a class="btn-dark" href="#">View on Amazon</a>
+</div>
+</div>
+
+<!-- EDITAR: Producto 3 -->
+<div class="product">
+<div class="product-image">
+<img src="https://i.postimg.cc/3Rt1bGnC/4.png" alt="Best baby monitor">
+</div>
+<div class="product-body">
+<div class="product-rank">#3 Best Monitor</div>
+<h3>Best Video Baby Monitor</h3>
+<div class="product-brand">HD with Night Vision</div>
+<p>A secure, high-definition baby monitor with crystal-clear night vision and two-way audio — so you always know your baby is safe.</p>
+<ul class="product-features">
+<li>HD video with night vision</li>
+<li>Secure encrypted connection</li>
+<li>Two-way audio communication</li>
+<li>Temperature & humidity sensor</li>
+</ul>
+<!-- EDITAR: reemplaza # con tu link de afiliado de Amazon -->
+<a class="btn-dark" href="#">View on Amazon</a>
+</div>
+</div>
+
+</div>
+
+<div class="why-section">
+<div class="content-card">
+<h2>Why Safe Sleep Matters</h2>
+<p class="lead">The first months of your baby's life are the most important for establishing safe, healthy sleep habits. The right environment — and the right products — make all the difference.</p>
+<div class="method-steps">
+<div class="step">
+<div class="step-num">01</div>
+<h4>Firm Sleep Surface</h4>
+<p>Babies need a firm, flat surface to sleep safely. Soft surfaces increase the risk of suffocation — always choose a certified firm mattress.</p>
+</div>
+<div class="step">
+<div class="step-num">02</div>
+<h4>No Loose Bedding</h4>
+<p>Keep the crib clear of pillows, blankets, and bumpers. A fitted sheet on a firm mattress is all your baby needs.</p>
+</div>
+<div class="step">
+<div class="step-num">03</div>
+<h4>Right Temperature</h4>
+<p>The ideal nursery temperature is between 68–72°F. A monitor with a temperature sensor helps you stay on top of this effortlessly.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="compare-section">
+<h2>Quick Comparison</h2>
+<table class="compare-table">
+<thead>
+<tr>
+<th>Product</th>
+<th>Best For</th>
+<th>Key Feature</th>
+</tr>
+</thead>
+<tbody>
+<!-- EDITAR: actualiza con productos reales -->
+<tr>
+<td>Best Overall Crib</td>
+<td>Long-term use</td>
+<td>Converts to toddler bed</td>
+</tr>
+<tr>
+<td>Best Breathable Mattress</td>
+<td>Newborns & toddlers</td>
+<td>Dual-sided design</td>
+</tr>
+<tr>
+<td>Best Video Monitor</td>
+<td>Peace of mind</td>
+<td>HD night vision + audio</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">
+As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>
