@@ -1,0 +1,232 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Air Quality & Comfort — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:1100px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:50px;}
+.badge{
+display:inline-block;background:#C4D0C1;color:#2f2a26;
+font-size:11px;font-weight:600;padding:5px 14px;
+border-radius:20px;margin-bottom:16px;
+letter-spacing:0.05em;text-transform:uppercase;
+}
+.page-header h1{
+font-family:'Cormorant Garamond', serif;
+font-size:52px;line-height:1.15;margin-bottom:16px;
+}
+.page-header p{font-size:18px;line-height:1.7;color:#4b433d;max-width:780px;}
+.affiliate-note{
+font-size:13px;color:#8a8076;
+margin-bottom:40px;
+padding:12px 18px;
+background:#eee8e0;
+border-radius:10px;
+display:inline-block;
+}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:80px;}
+.product{
+background:#fff;border-radius:28px;overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,0.07);
+transition:all .3s ease;display:flex;flex-direction:column;
+}
+.product:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,0.11);}
+.product-image img{width:100%;height:auto;display:block;transition:transform .4s ease;}
+.product:hover .product-image img{transform:scale(1.03);}
+.product-body{padding:28px;flex:1;display:flex;flex-direction:column;}
+.product-rank{font-size:11px;font-weight:600;color:#8a9e87;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;}
+.product-body h3{font-size:20px;font-weight:600;margin-bottom:6px;}
+.product-brand{font-size:12px;color:#8a8076;margin-bottom:14px;}
+.product-body p{font-size:14px;color:#5c524a;line-height:1.65;margin-bottom:18px;flex:1;}
+.product-features{list-style:none;padding:0;margin:0 0 24px 0;}
+.product-features li{
+font-size:13px;color:#5c524a;padding:7px 0;
+border-bottom:1px solid #f0ece4;
+display:flex;align-items:center;gap:8px;
+}
+.product-features li:last-child{border-bottom:none;}
+.product-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C4D0C1;flex-shrink:0;}
+.why-section{margin-bottom:80px;}
+.compare-section h2{font-family:'Cormorant Garamond', serif;font-size:36px;margin-bottom:28px;}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.products{grid-template-columns:1fr;}
+.page-header h1{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+Back
+</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+<div class="page-header">
+<div class="badge">Editor's Choice 2025</div>
+<!-- EDITAR: título -->
+<h1>Premium Air Quality & Comfort for Your Nursery</h1>
+<!-- EDITAR: descripción -->
+<p>The air your baby breathes matters more than most parents realize. These premium picks ensure your nursery stays clean, comfortable, and perfectly balanced — every single day.</p>
+</div>
+
+<!-- AFFILIATE NOTE — NO BORRAR -->
+<div class="affiliate-note">
+Our recommendations include affiliate links — you pay the same price on Amazon, we may earn a small commission.
+</div>
+
+<div class="products">
+
+<!-- EDITAR: Producto 1 -->
+<div class="product">
+<div class="product-image">
+<!-- EDITAR: reemplaza con foto real -->
+<img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800&q=80" alt="Dyson air purifier nursery">
+</div>
+<div class="product-body">
+<div class="product-rank">#1 Best Purifier</div>
+<h3>Dyson Purifier Cool</h3>
+<div class="product-brand">by Dyson</div>
+<p>The ultimate nursery air purifier. Captures 99.97% of particles as small as 0.3 microns while simultaneously cooling the room — all in Dyson's iconic, award-winning design.</p>
+<ul class="product-features">
+<li>HEPA H13 filtration system</li>
+<li>Captures allergens, dust & pollutants</li>
+<li>Doubles as a fan for cooling</li>
+<li>Auto mode with real-time air sensing</li>
+</ul>
+<!-- EDITAR: reemplaza # con tu link de afiliado -->
+<a class="btn-dark" href="#">View on Amazon</a>
+</div>
+</div>
+
+<!-- EDITAR: Producto 2 -->
+<div class="product">
+<div class="product-image">
+<!-- EDITAR: reemplaza con foto real -->
+<img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=800&q=80" alt="Levoit air purifier">
+</div>
+<div class="product-body">
+<div class="product-rank">#2 Best Smart Purifier</div>
+<h3>Levoit Core 600S</h3>
+<div class="product-brand">by Levoit</div>
+<p>A powerful smart air purifier with a built-in laser particle sensor that detects air quality in real time and automatically adjusts fan speed — perfect for larger nurseries.</p>
+<ul class="product-features">
+<li>Covers up to 635 sq ft</li>
+<li>Real-time air quality sensor</li>
+<li>Works with Alexa & Google Home</li>
+<li>Ultra-quiet sleep mode</li>
+</ul>
+<!-- EDITAR: reemplaza # con tu link de afiliado -->
+<a class="btn-dark" href="#">View on Amazon</a>
+</div>
+</div>
+
+<!-- EDITAR: Producto 3 -->
+<div class="product">
+<div class="product-image">
+<!-- EDITAR: reemplaza con foto real -->
+<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80" alt="Canopy nursery humidifier">
+</div>
+<div class="product-body">
+<div class="product-rank">#3 Best Humidifier</div>
+<h3>Canopy Humidifier</h3>
+<div class="product-brand">by Canopy</div>
+<p>The most thoughtfully designed humidifier for nurseries. Disperses clean, pure mist — no white dust, no mold risk — keeping your baby's skin and airways perfectly hydrated.</p>
+<ul class="product-features">
+<li>Mold-inhibiting technology</li>
+<li>No white dust output</li>
+<li>Dishwasher-safe components</li>
+<li>Aromatherapy diffuser compatible</li>
+</ul>
+<!-- EDITAR: reemplaza # con tu link de afiliado -->
+<a class="btn-dark" href="#">View on Amazon</a>
+</div>
+</div>
+
+</div>
+
+<div class="why-section">
+<div class="content-card">
+<h2>Why Air Quality Matters in a Nursery</h2>
+<p class="lead">Babies breathe twice as fast as adults and spend up to 16 hours a day sleeping. The quality of the air in their nursery has a direct impact on their health, comfort, and development.</p>
+<div class="method-steps">
+<div class="step">
+<div class="step-num">01</div>
+<h4>Reduce Allergens</h4>
+<p>Dust, pet dander, pollen, and mold spores are invisible threats. A HEPA air purifier removes up to 99.97% of these particles from your nursery air.</p>
+</div>
+<div class="step">
+<div class="step-num">02</div>
+<h4>Ideal Humidity</h4>
+<p>The ideal nursery humidity is between 40–60%. Too dry causes congestion and dry skin. A quality humidifier keeps the balance perfect year-round.</p>
+</div>
+<div class="step">
+<div class="step-num">03</div>
+<h4>Right Temperature</h4>
+<p>The ideal nursery temperature is 68–72°F. A purifier with fan functionality helps you maintain this while keeping air clean and circulating.</p>
+</div>
+</div>
+</div>
+</div>
+
+<div class="compare-section">
+<h2>Quick Comparison</h2>
+<table class="compare-table">
+<thead>
+<tr>
+<th>Product</th>
+<th>Best For</th>
+<th>Key Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dyson Purifier Cool</td>
+<td>Air purification + cooling</td>
+<td>HEPA H13 + fan in one</td>
+</tr>
+<tr>
+<td>Levoit Core 600S</td>
+<td>Larger nurseries</td>
+<td>Real-time air quality sensor</td>
+</tr>
+<tr>
+<td>Canopy Humidifier</td>
+<td>Humidity & skin comfort</td>
+<td>Mold-inhibiting, no white dust</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">
+As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>
