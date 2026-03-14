@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:800px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:60px;}
+.page-header h1{
+font-family:'Cormorant Garamond', serif;
+font-size:48px;line-height:1.15;margin-bottom:16px;
+}
+.page-header p{font-size:16px;color:#8a8076;}
+.about-body{
+background:#fff;border-radius:28px;
+padding:60px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+margin-bottom:40px;
+}
+.about-body h2{
+font-family:'Cormorant Garamond', serif;
+font-size:32px;margin-bottom:16px;margin-top:40px;
+}
+.about-body h2:first-child{margin-top:0;}
+.about-body p{
+font-size:16px;color:#5c524a;
+line-height:1.8;margin-bottom:16px;
+}
+/* EDITAR: cambia estos valores por tu información personal */
+.founder-card{
+display:flex;align-items:center;gap:28px;
+background:#F5F1EB;border-radius:16px;
+padding:28px;margin:32px 0;
+}
+.founder-avatar{
+width:72px;height:72px;border-radius:50%;
+background:#C4D0C1;flex-shrink:0;
+display:flex;align-items:center;justify-content:center;
+font-family:'Cormorant Garamond', serif;
+font-size:28px;font-weight:600;color:#2f2a26;
+}
+.founder-info h4{font-size:16px;font-weight:600;margin-bottom:4px;}
+.founder-info p{font-size:14px;color:#6b6158;margin:0;line-height:1.5;}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.about-body{padding:32px 24px;}
+.page-header h1{font-size:36px;}
+.founder-card{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+Back
+</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+<div class="page-header">
+<h1>About Little Haven</h1>
+<p>Our story and our mission</p>
+</div>
+
+<div class="about-body">
+
+<h2>Why Little Haven exists</h2>
+<!-- EDITAR: reemplaza con tu historia personal -->
+<p>
+Little Haven was created by a parent who went through the overwhelming experience of building a nursery for the first time. The amount of products, the conflicting reviews, and the pressure to make the right choices made the process more stressful than it needed to be.
+</p>
+<p>
+We built Little Haven to change that. Our mission is simple — to cut through the noise and give modern parents a trusted, curated source for premium nursery essentials, so you can focus on what really matters.
+</p>
+
+<!-- EDITAR: cambia el nombre, iniciales y descripción por los tuyos -->
+<div class="founder-card">
+<div class="founder-avatar">LH</div>
+<div class="founder-info">
+<h4>The Little Haven Team</h4>
+<p>Parents, researchers, and nursery design enthusiasts dedicated to helping families build beautiful, safe spaces for their babies.</p>
+</div>
+</div>
+
+<h2>What we believe</h2>
+<p>
+Your baby's nursery is one of the most important spaces you will ever create. It should be safe, calm, and beautiful — and every product in it should earn its place.
+</p>
+<p>
+We believe that premium doesn't mean overpriced. It means thoughtfully designed, rigorously tested, and built to last. That is the standard we hold every recommendation to.
+</p>
+
+<h2>How we choose products</h2>
+<p>
+Every product featured on Little Haven goes through the same evaluation process — safety certifications, material quality, real parent reviews, and long-term durability. We don't accept sponsorships or paid placements. Our recommendations are entirely independent.
+</p>
+<p>
+When you see a product on Little Haven, it's because we genuinely believe it belongs in a premium nursery — nothing more, nothing less.
+</p>
+
+<h2>Affiliate disclosure</h2>
+<p>
+Little Haven participates in the Amazon Associates program. Some links on this site are affiliate links, which means we may earn a small commission if you purchase through them — at no extra cost to you. This helps us keep the site running and the recommendations honest.
+</p>
+<p>
+You can read our full <a href="affiliate-disclosure.html" style="color:#2f2a26;text-decoration:underline;">Affiliate Disclosure here</a>.
+</p>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">
+As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>
