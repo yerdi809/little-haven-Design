@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:800px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:60px;}
+.page-header h1{
+font-family:'Cormorant Garamond', serif;
+font-size:48px;line-height:1.15;margin-bottom:16px;
+}
+.page-header p{
+font-size:18px;color:#5c524a;line-height:1.7;
+}
+.contact-body{
+background:#fff;border-radius:28px;
+padding:60px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+.contact-body h2{
+font-family:'Cormorant Garamond', serif;
+font-size:28px;margin-bottom:16px;
+}
+.contact-body p{
+font-size:16px;color:#5c524a;
+line-height:1.8;margin-bottom:24px;
+}
+/* EDITAR: reemplaza con tu email real */
+.email-card{
+background:#F5F1EB;
+border-radius:16px;
+padding:28px 32px;
+margin:32px 0;
+display:flex;
+align-items:center;
+gap:16px;
+}
+.email-icon{
+width:44px;height:44px;border-radius:50%;
+background:#C4D0C1;flex-shrink:0;
+display:flex;align-items:center;justify-content:center;
+}
+.email-icon svg{
+width:20px;height:20px;
+stroke:#2f2a26;fill:none;
+stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
+}
+.email-info p{margin:0;font-size:14px;color:#8a8076;margin-bottom:4px;}
+/* EDITAR: reemplaza con tu email real */
+.email-info a{
+font-size:17px;font-weight:600;
+color:#2f2a26;text-decoration:none;
+transition:opacity .2s;
+}
+.email-info a:hover{opacity:0.7;}
+.topics{
+display:grid;grid-template-columns:1fr 1fr;
+gap:16px;margin-top:32px;
+}
+.topic{
+background:#F5F1EB;
+border-radius:14px;padding:20px;
+}
+.topic h4{font-size:14px;font-weight:600;margin-bottom:6px;}
+.topic p{font-size:13px;color:#6b6158;line-height:1.5;margin:0;}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.contact-body{padding:32px 24px;}
+.page-header h1{font-size:36px;}
+.topics{grid-template-columns:1fr;}
+.email-card{flex-direction:column;text-align:center;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+Back
+</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+<div class="page-header">
+<h1>Get in Touch</h1>
+<p>Have a question, a product suggestion, or just want to say hello? We'd love to hear from you.</p>
+</div>
+
+<div class="contact-body">
+
+<h2>Send us a message</h2>
+<p>
+We read every message personally and do our best to respond within 1–2 business days.
+</p>
+
+<!-- EDITAR: reemplaza hello@littlehaven.com con tu email real -->
+<div class="email-card">
+<div class="email-icon">
+<svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+</div>
+<div class="email-info">
+<p>Email us at</p>
+<!-- EDITAR: reemplaza con tu email real -->
+<a href="mailto:hello@littlehaven.com">hello@littlehaven.com</a>
+</div>
+</div>
+
+<h2>What we can help with</h2>
+
+<div class="topics">
+<div class="topic">
+<h4>Product questions</h4>
+<p>Have a question about a specific product we recommend? We're happy to help.</p>
+</div>
+<div class="topic">
+<h4>Product suggestions</h4>
+<p>Know of a premium nursery product we should review? We'd love to hear about it.</p>
+</div>
+<div class="topic">
+<h4>Affiliate & partnerships</h4>
+<p>Interested in working with Little Haven? Reach out and tell us about your brand.</p>
+</div>
+<div class="topic">
+<h4>General feedback</h4>
+<p>We're always looking to improve. Your feedback helps us build a better resource for parents.</p>
+</div>
+</div>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">
+As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>
