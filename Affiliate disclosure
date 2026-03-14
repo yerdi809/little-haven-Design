@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate Disclosure — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{
+max-width:800px;
+margin:auto;
+padding:40px 40px 100px;
+}
+.page-header{margin-bottom:60px;}
+.page-header h1{
+font-family:'Cormorant Garamond', serif;
+font-size:48px;line-height:1.15;margin-bottom:16px;
+}
+.page-header p{
+font-size:16px;color:#8a8076;
+}
+.disclosure-body{
+background:#fff;
+border-radius:28px;
+padding:60px;
+box-shadow:0 15px 40px rgba(0,0,0,0.05);
+}
+.disclosure-body h2{
+font-family:'Cormorant Garamond', serif;
+font-size:28px;margin-bottom:16px;margin-top:40px;
+}
+.disclosure-body h2:first-child{margin-top:0;}
+.disclosure-body p{
+font-size:16px;color:#5c524a;
+line-height:1.8;margin-bottom:16px;
+}
+.highlight{
+background:#F5F1EB;
+border-left:3px solid #C4D0C1;
+padding:20px 24px;
+border-radius:0 12px 12px 0;
+margin:24px 0;
+font-size:15px;
+color:#2f2a26;
+line-height:1.7;
+}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.disclosure-body{padding:32px 24px;}
+.page-header h1{font-size:36px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+<a class="nav-back" href="index.html">
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+Back
+</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+<div class="page-header">
+<h1>Affiliate Disclosure</h1>
+<p>Last updated: 2025</p>
+</div>
+
+<div class="disclosure-body">
+
+<div class="highlight">
+As an Amazon Associate, Little Haven earns from qualifying purchases. This means we may earn a small commission when you click our links and make a purchase on Amazon — at no extra cost to you.
+</div>
+
+<h2>Our Commitment to Transparency</h2>
+<p>
+Little Haven is committed to being fully transparent with our readers. Some of the links on this website are affiliate links, which means that if you click on the link and purchase the item, we may receive an affiliate commission.
+</p>
+<p>
+This disclosure is provided in compliance with the Federal Trade Commission (FTC) guidelines and the Amazon Associates Program policies.
+</p>
+
+<h2>Amazon Associates Program</h2>
+<p>
+Little Haven is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com.
+</p>
+<p>
+When you see a "View on Amazon" button or any link marked as "(paid link)" on this site, that link may be an affiliate link. Clicking these links and making a purchase helps support Little Haven at no additional cost to you.
+</p>
+
+<h2>Our Editorial Independence</h2>
+<p>
+Our affiliate relationships never influence our recommendations. Every product featured on Little Haven is selected based on safety, quality, and genuine value for parents — not based on commission rates or brand relationships.
+</p>
+<p>
+We only recommend products we believe are truly worth your money. If a product doesn't meet our standards, we don't recommend it — regardless of any potential commission.
+</p>
+
+<h2>Prices & Availability</h2>
+<p>
+Product prices and availability are accurate as of the date they were last updated. Prices and availability are subject to change. Any price displayed on Amazon at the time of purchase will apply.
+</p>
+
+<h2>Questions?</h2>
+<p>
+If you have any questions about our affiliate disclosure or how we select products, please feel free to contact us. We are always happy to provide more information about how Little Haven operates.
+</p>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">
+As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+</body>
+</html>
