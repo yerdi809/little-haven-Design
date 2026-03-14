@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Safe Sleep Essentials — Little Haven</title>
+<title>Monitoring & Safety — Little Haven</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;}
@@ -52,84 +52,215 @@ max-width:1100px;
 margin:auto;
 padding:40px 40px 120px;
 }
-h1{
+
+/* HEADER */
+.page-header{
+margin-bottom:70px;
+}
+.page-header h1{
 font-family:'Cormorant Garamond', serif;
 font-size:52px;
-margin-bottom:20px;
+margin-bottom:16px;
+line-height:1.15;
 }
-.intro{
+.page-header p{
 font-size:19px;
 line-height:1.7;
-margin-bottom:80px;
 color:#4b433d;
-max-width:800px;
+max-width:780px;
 }
 
-/* COMPARISON */
-.comparison{
+/* BADGE */
+.badge{
+display:inline-block;
+background:#C4D0C1;
+color:#2f2a26;
+font-size:12px;
+font-weight:600;
+padding:5px 14px;
+border-radius:20px;
+margin-bottom:18px;
+letter-spacing:0.04em;
+}
+
+/* PRODUCT GRID */
+.grid{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:40px;
+gap:36px;
 margin-bottom:100px;
 }
 .product{
 background:#fff;
 border-radius:30px;
-padding:35px;
+overflow:hidden;
 box-shadow:0 18px 45px rgba(0,0,0,0.07);
-text-align:center;
+transition:all .3s ease;
 }
-.product img{
+.product:hover{
+transform:translateY(-8px);
+box-shadow:0 30px 70px rgba(0,0,0,0.12);
+}
+.product-image{
+aspect-ratio:4/3;
+overflow:hidden;
+}
+.product-image img{
 width:100%;
-border-radius:20px;
-margin-bottom:25px;
+height:100%;
+object-fit:cover;
+transition:transform .35s ease;
 }
-.product h3{
-margin-bottom:15px;
+.product:hover .product-image img{
+transform:scale(1.05);
+}
+.product-body{
+padding:30px;
+}
+.product-rank{
+font-size:11px;
+font-weight:600;
+color:#8a9e87;
+letter-spacing:0.08em;
+text-transform:uppercase;
+margin-bottom:8px;
+}
+.product-body h3{
 font-size:20px;
+font-weight:600;
+margin-bottom:6px;
 }
-.product ul{
-text-align:left;
-margin-bottom:30px;
+.product-brand{
+font-size:13px;
+color:#8a8076;
+margin-bottom:16px;
+}
+.product-body p{
+font-size:15px;
 color:#5c524a;
-line-height:1.6;
-padding-left:20px;
+line-height:1.65;
+margin-bottom:20px;
+}
+.product-features{
+list-style:none;
+padding:0;
+margin:0 0 28px 0;
+}
+.product-features li{
+font-size:14px;
+color:#5c524a;
+padding:6px 0;
+border-bottom:1px solid #f0ece4;
+display:flex;
+align-items:center;
+gap:8px;
+}
+.product-features li:last-child{
+border-bottom:none;
+}
+.product-features li::before{
+content:'';
+width:6px;
+height:6px;
+border-radius:50%;
+background:#C4D0C1;
+flex-shrink:0;
+}
+.price{
+font-size:22px;
+font-weight:600;
+margin-bottom:18px;
+color:#2f2a26;
+}
+.price span{
+font-size:14px;
+font-weight:400;
+color:#8a8076;
+margin-left:4px;
 }
 .btn{
-display:inline-block;
-background:#C4D0C1;
-padding:16px 32px;
+display:block;
+width:100%;
+background:#2f2a26;
+color:#F5F1EB;
+padding:16px;
 border-radius:16px;
 font-weight:600;
-text-decoration:none;
-color:#2f2a26;
+font-size:15px;
+text-align:center;
 transition:all .25s ease;
 }
 .btn:hover{
-transform:translateY(-4px);
-box-shadow:0 12px 25px rgba(0,0,0,0.15);
+background:#1a1714;
+transform:translateY(-2px);
 }
 
-.section{
-margin-top:100px;
+/* WHY SECTION */
+.why-section{
+background:#fff;
+border-radius:30px;
+padding:60px;
+margin-bottom:60px;
+box-shadow:0 18px 45px rgba(0,0,0,0.05);
 }
-.section h2{
+.why-section h2{
 font-family:'Cormorant Garamond', serif;
 font-size:40px;
-margin-bottom:25px;
+margin-bottom:20px;
 }
-.section p{
+.why-section p{
+font-size:17px;
 line-height:1.8;
 color:#5c524a;
-font-size:18px;
 max-width:800px;
+margin-bottom:20px;
 }
 
+/* COMPARISON TABLE */
+.compare{
+margin-top:50px;
+}
+.compare h2{
+font-family:'Cormorant Garamond', serif;
+font-size:36px;
+margin-bottom:30px;
+}
+.compare-table{
+width:100%;
+border-collapse:collapse;
+font-size:15px;
+}
+.compare-table th{
+background:#2f2a26;
+color:#F5F1EB;
+padding:14px 20px;
+text-align:left;
+font-weight:500;
+}
+.compare-table th:first-child{
+border-radius:12px 0 0 0;
+}
+.compare-table th:last-child{
+border-radius:0 12px 0 0;
+}
+.compare-table td{
+padding:14px 20px;
+border-bottom:1px solid #f0ece4;
+color:#4b433d;
+}
+.compare-table tr:nth-child(even) td{
+background:#faf8f5;
+}
+.compare-table tr:last-child td{
+border-bottom:none;
+}
+
+/* RESPONSIVE */
 @media(max-width:900px){
-.comparison{
+.grid{
 grid-template-columns:1fr;
 }
-h1{
+.page-header h1{
 font-size:38px;
 }
 .nav{
@@ -137,6 +268,9 @@ padding:20px;
 }
 .container{
 padding:30px 20px 80px;
+}
+.why-section{
+padding:36px 24px;
 }
 }
 </style>
@@ -155,53 +289,131 @@ Back
 </nav>
 
 <div class="container">
-<h1>Best Safe Sleep Essentials for Modern Nurseries</h1>
-<p class="intro">
-Expert-reviewed cribs, breathable mattresses, and monitoring solutions designed to create a calm and safe sleep environment for your baby.
-</p>
 
-<div class="comparison">
-<div class="product">
-<img src="https://i.postimg.cc/Ssgdt9D8/3.png" alt="Best overall crib">
-<h3>Best Overall Crib</h3>
-<ul>
-<li>Greenguard Gold Certified materials</li>
-<li>Sturdy solid wood construction</li>
-<li>Minimal, modern nursery design</li>
-</ul>
-<a class="btn" href="#">View on Amazon</a>
-</div>
-
-<div class="product">
-<img src="https://i.postimg.cc/Qtfmn701/5.png" alt="Best breathable mattress">
-<h3>Best Breathable Mattress</h3>
-<ul>
-<li>Breathable core for airflow</li>
-<li>Firm infant support</li>
-<li>Easy-clean removable cover</li>
-</ul>
-<a class="btn" href="#">View on Amazon</a>
-</div>
-
-<div class="product">
-<img src="https://i.postimg.cc/3Rt1bGnC/4.png" alt="Best baby monitor">
-<h3>Best Baby Monitor</h3>
-<ul>
-<li>HD video with night vision</li>
-<li>Secure encrypted connection</li>
-<li>Two-way audio communication</li>
-</ul>
-<a class="btn" href="#">View on Amazon</a>
-</div>
-</div>
-
-<div class="section">
-<h2>What to Look for in Safe Sleep Essentials</h2>
+<div class="page-header">
+<div class="badge">Editor's Choice 2025</div>
+<h1>Premium Monitoring & Safety for Your Nursery</h1>
 <p>
-When selecting safe sleep products, prioritize firm surfaces, breathable materials, and products that meet current pediatric safety guidelines. Avoid loose bedding and ensure cribs and mattresses fit properly without gaps.
+Smart monitoring technology trusted by discerning parents. Every pick is selected for precision, reliability, and design — because peace of mind should never be compromised.
 </p>
+</div>
+
+<div class="grid">
+
+<!-- Product 1: Nanit Pro -->
+<div class="product">
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1566004100631-35d015d6a491?w=800&q=80" alt="Baby sleeping peacefully in modern nursery">
+</div>
+<div class="product-body">
+<div class="product-rank">#1 Best Overall</div>
+<h3>Nanit Pro Camera</h3>
+<div class="product-brand">by Nanit</div>
+<p>The gold standard in baby monitoring. Uses computer vision to track your baby's sleep patterns and breathing motion with clinical-grade precision.</p>
+<ul class="product-features">
+<li>4K HD camera with night vision</li>
+<li>AI-powered sleep tracking & insights</li>
+<li>Breathing motion monitoring</li>
+<li>Two-way audio & temperature sensor</li>
+<li>Works with Alexa & Google Home</li>
+</ul>
+<div class="price">$299 <span>on Amazon</span></div>
+<a class="btn" href="#">View on Amazon</a>
 </div>
 </div>
 
+<!-- Product 2: Owlet Dream Sock -->
+<div class="product">
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=800&q=80" alt="Newborn baby feet in soft nursery setting">
+</div>
+<div class="product-body">
+<div class="product-rank">#2 Best Wearable</div>
+<h3>Owlet Dream Sock</h3>
+<div class="product-brand">by Owlet</div>
+<p>A smart sock that monitors your baby's oxygen levels and heart rate while they sleep — sending real-time alerts directly to your phone.</p>
+<ul class="product-features">
+<li>Pulse oximetry oxygen monitoring</li>
+<li>Live heart rate tracking</li>
+<li>Instant smartphone notifications</li>
+<li>Clinically validated technology</li>
+<li>Soft, comfortable fabric design</li>
+</ul>
+<div class="price">$229 <span>on Amazon</span></div>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+</div>
+
+<!-- Product 3: Airthings Baby -->
+<div class="product">
+<div class="product-image">
+<img src="https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80" alt="Clean minimal modern nursery room">
+</div>
+<div class="product-body">
+<div class="product-rank">#3 Best Air Monitor</div>
+<h3>Airthings Baby Monitor</h3>
+<div class="product-brand">by Airthings</div>
+<p>Goes beyond video. Continuously measures CO2, humidity, temperature, and airborne particles to ensure your baby always breathes clean, healthy air.</p>
+<ul class="product-features">
+<li>CO2 & VOC air quality monitoring</li>
+<li>Humidity & temperature sensors</li>
+<li>PM2.5 particle detection</li>
+<li>Real-time app dashboard</li>
+<li>Sleek Scandinavian design</li>
+</ul>
+<div class="price">$199 <span>on Amazon</span></div>
+<a class="btn" href="#">View on Amazon</a>
+</div>
+</div>
+
+</div>
+
+<!-- Why Section -->
+<div class="why-section">
+<h2>Why Premium Monitoring Matters</h2>
+<p>
+In the early months of your baby's life, monitoring technology gives parents something truly invaluable — restful sleep and genuine peace of mind. Budget monitors offer basic video. Premium monitors offer insight.
+</p>
+<p>
+The products above represent the top tier of nursery safety technology in 2025. Each has been evaluated for accuracy, reliability, ease of use, and long-term value. When it comes to your baby's safety, these are the tools that deliver.
+</p>
+</div>
+
+<!-- Comparison Table -->
+<div class="compare">
+<h2>Quick Comparison</h2>
+<table class="compare-table">
+<thead>
+<tr>
+<th>Product</th>
+<th>Best For</th>
+<th>Key Feature</th>
+<th>Price</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nanit Pro</td>
+<td>Complete sleep monitoring</td>
+<td>AI sleep tracking + 4K video</td>
+<td>$299</td>
+</tr>
+<tr>
+<td>Owlet Dream Sock</td>
+<td>Oxygen & heart rate</td>
+<td>Pulse oximetry monitoring</td>
+<td>$229</td>
+</tr>
+<tr>
+<td>Airthings Baby</td>
+<td>Air quality</td>
+<td>CO2 & particle detection</td>
+<td>$199</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+</div>
 </body>
 </html>
