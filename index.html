@@ -153,6 +153,16 @@ grid-template-columns:1fr;
   gtag('config', 'G-NN6HJ5XYS6');
 </script>
 </head>
+  <!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+<script>
+const btn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function(){
+btn.classList.toggle('visible', window.scrollY > 300);
+});
+</script>
 <body>
 
 <!-- ── NAV ── -->
