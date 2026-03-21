@@ -216,6 +216,45 @@ background:#e8e0d6;border-radius:10px;
 }
 .footer-copy{font-size:12px;color:#8a8076;}
 
+/* ── SCROLL TO TOP BUTTON ── */
+.scroll-top{
+position:fixed;
+bottom:32px;
+right:32px;
+width:48px;
+height:48px;
+background:#2f2a26;
+color:#F5F1EB;
+border:none;
+border-radius:50%;
+cursor:pointer;
+display:flex;
+align-items:center;
+justify-content:center;
+opacity:0;
+visibility:hidden;
+transition:all .3s ease;
+z-index:999;
+box-shadow:0 4px 16px rgba(0,0,0,0.2);
+}
+.scroll-top.visible{
+opacity:1;
+visibility:visible;
+}
+.scroll-top:hover{
+background:#1a1714;
+transform:translateY(-3px);
+}
+.scroll-top svg{
+width:20px;
+height:20px;
+stroke:#F5F1EB;
+fill:none;
+stroke-width:2;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
 .nav{padding:24px 20px;}
@@ -225,4 +264,5 @@ background:#e8e0d6;border-radius:10px;
 .method-steps{grid-template-columns:1fr;gap:28px;}
 .footer{padding:40px 20px;}
 .footer-links{gap:20px;}
+.scroll-top{bottom:20px;right:20px;}
 }
