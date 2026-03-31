@@ -122,6 +122,51 @@ color:#2f2a26;transition:gap .2s;
 .card-link:hover{gap:12px;}
 .card-link svg{width:16px;height:16px;}
 
+/* ── INSPIRATION BANNER ── */
+.inspiration-banner{
+max-width:1200px;
+margin:0 auto 100px;
+padding:0 40px;
+}
+.inspiration-inner{
+background:#2f2a26;
+border-radius:28px;
+padding:60px 70px;
+display:grid;
+grid-template-columns:1fr auto;
+align-items:center;
+gap:40px;
+}
+.inspiration-inner h2{
+font-family:'Cormorant Garamond', serif;
+font-size:40px;
+font-weight:600;
+color:#F5F1EB;
+margin-bottom:14px;
+}
+.inspiration-inner p{
+font-size:16px;
+color:#a89e94;
+line-height:1.7;
+max-width:560px;
+}
+.btn-light{
+display:inline-block;
+background:#F5F1EB;
+color:#2f2a26;
+padding:18px 40px;
+border-radius:16px;
+font-weight:600;
+font-size:15px;
+transition:all .25s ease;
+white-space:nowrap;
+flex-shrink:0;
+}
+.btn-light:hover{
+background:#fff;
+transform:translateY(-3px);
+}
+
 /* ── METHODOLOGY ── */
 .methodology{
 max-width:1200px;
@@ -142,18 +187,26 @@ grid-template-columns:1fr;
 .categories{padding:0 20px 70px;}
 .grid{grid-template-columns:1fr;}
 .methodology{padding:60px 20px 80px;}
+.inspiration-banner{padding:0 20px;margin-bottom:70px;}
+.inspiration-inner{
+padding:36px 28px;
+grid-template-columns:1fr;
+}
+.inspiration-inner h2{font-size:32px;}
 }
 </style>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NN6HJ5XYS6');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NN6HJ5XYS6');
 </script>
 </head>
-  <!-- SCROLL TO TOP -->
+<body>
+
+<!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
 <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
@@ -163,15 +216,14 @@ window.addEventListener('scroll', function(){
 btn.classList.toggle('visible', window.scrollY > 300);
 });
 </script>
-<body>
 
-<!-- ── NAV ── -->
+<!-- NAV -->
 <nav class="nav">
 <div class="nav-logo">Little Haven</div>
 <div class="nav-tagline">Premium Nursery Essentials</div>
 </nav>
 
-<!-- ── HERO ── -->
+<!-- HERO -->
 <section class="hero">
 <div class="hero-inner">
 <div class="hero-image">
@@ -190,7 +242,7 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </section>
 
-<!-- ── CATEGORIES ── -->
+<!-- CATEGORIES -->
 <section class="categories" id="categories">
 <div class="section-header">
 <div class="section-label">Curated Collections</div>
@@ -200,7 +252,6 @@ btn.classList.toggle('visible', window.scrollY > 300);
 
 <div class="grid">
 
-<!-- Tarjeta 1 — Safe Sleep -->
 <a href="safe-sleep.html" class="card">
 <div class="card-image">
 <img src="https://i.postimg.cc/SNhdt4YT/Chat-GPT-Image-Mar-21-2026-03-52-56-PM.png" alt="Premium nursery crib">
@@ -213,7 +264,6 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </a>
 
-<!-- Tarjeta 2 — Furniture -->
 <a href="furniture.html" class="card">
 <div class="card-image">
 <img src="https://i.postimg.cc/jqXntYkm/Chat-GPT-Image-Mar-21-2026-03-57-17-PM.png" alt="Modern nursery furniture">
@@ -226,7 +276,6 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </a>
 
-<!-- Tarjeta 3 — Monitoring -->
 <a href="monitoring-safety.html" class="card">
 <div class="card-image">
 <img src="https://i.postimg.cc/Jnt7LSD4/Chat-GPT-Image-Mar-21-2026-04-12-06-PM.png" alt="Premium baby monitor">
@@ -239,7 +288,6 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </a>
 
-<!-- Tarjeta 4 — Air Quality -->
 <a href="air-quality.html" class="card">
 <div class="card-image">
 <img src="https://i.postimg.cc/QCYXV3Pp/Chat-GPT-Image-Mar-21-2026-04-31-45-PM.png" alt="Clean nursery environment">
@@ -255,7 +303,18 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </section>
 
-<!-- ── TRUST STRIP ── -->
+<!-- INSPIRATION BANNER -->
+<section class="inspiration-banner">
+<div class="inspiration-inner">
+<div>
+<h2>Find Your Nursery Style</h2>
+<p>Explore four curated aesthetics — Scandinavian, Boho, Minimalist, and Cottagecore. Click the red dots on each room to shop every product directly on Amazon.</p>
+</div>
+<a class="btn-light" href="inspiration.html">Explore Styles</a>
+</div>
+</section>
+
+<!-- TRUST STRIP -->
 <section class="trust-strip">
 <div class="trust-strip-inner">
 <h2>Why Parents Trust Little Haven</h2>
@@ -280,7 +339,7 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </section>
 
-<!-- ── METHODOLOGY ── -->
+<!-- METHODOLOGY -->
 <section class="methodology">
 <div class="content-card">
 <h2>Our Selection Methodology</h2>
@@ -305,7 +364,7 @@ btn.classList.toggle('visible', window.scrollY > 300);
 </div>
 </section>
 
-<!-- ── FOOTER ── -->
+<!-- FOOTER -->
 <footer class="footer">
 <div class="footer-inner">
 <div class="footer-logo">Little Haven</div>
@@ -313,9 +372,9 @@ btn.classList.toggle('visible', window.scrollY > 300);
 <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="about.html">About</a>
+<a href="inspiration.html">Inspiration</a>
 <a href="contact.html">Contact</a>
 </div>
-<!-- AMAZON REQUIRED DISCLAIMER — NO BORRAR -->
 <div class="footer-disclaimer">
 As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
 </div>
