@@ -8,180 +8,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-
-/* ── HERO ── */
-.hero{
-max-width:1200px;
-margin:auto;
-padding:10px 40px 80px;
-}
-.hero-inner{
-background:#fff;
-border-radius:36px;
-overflow:hidden;
-box-shadow:0 25px 60px rgba(0,0,0,0.07);
-}
-.hero-image img{
-width:100%;
-height:auto;
-display:block;
-}
-.hero-content{
-padding:60px 70px 70px;
-display:grid;
-grid-template-columns:1fr auto;
-align-items:end;
-gap:40px;
-}
-.hero-content h1{
-font-family:'Cormorant Garamond', serif;
-font-size:54px;
-font-weight:600;
-line-height:1.1;
-margin-bottom:20px;
-}
-.hero-content p{
-font-size:18px;
-line-height:1.7;
-color:#5c524a;
-max-width:560px;
-}
-.hero-cta{
-text-align:right;
-flex-shrink:0;
-}
-.hero-micro{
-margin-top:12px;
-font-size:12px;
-color:#8a8076;
-text-align:right;
-}
-
-/* ── CATEGORIES ── */
-.categories{
-max-width:1200px;
-margin:auto;
-padding:0 40px 100px;
-}
+.hero{max-width:1200px;margin:auto;padding:10px 40px 80px;}
+.hero-inner{background:#fff;border-radius:36px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.07);}
+.hero-image img{width:100%;height:auto;display:block;}
+.hero-content{padding:60px 70px 70px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;}
+.hero-content h1{font-family:'Cormorant Garamond',serif;font-size:54px;font-weight:600;line-height:1.1;margin-bottom:20px;}
+.hero-content p{font-size:18px;line-height:1.7;color:#5c524a;max-width:560px;}
+.hero-cta{text-align:right;flex-shrink:0;}
+.hero-micro{margin-top:12px;font-size:12px;color:#8a8076;text-align:right;}
+.categories{max-width:1200px;margin:auto;padding:0 40px 100px;}
 .section-header{margin-bottom:60px;}
-.section-header h2{
-font-family:'Cormorant Garamond', serif;
-font-size:44px;font-weight:600;
-margin-bottom:16px;
-}
-.section-header p{
-font-size:17px;color:#5c524a;
-line-height:1.7;max-width:680px;
-}
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:28px;
-}
-.card{
-background:#fff;
-border-radius:28px;
-overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,0.06);
-transition:all .3s ease;
-display:flex;flex-direction:column;
-}
-.card:hover{
-transform:translateY(-8px);
-box-shadow:0 28px 65px rgba(0,0,0,0.11);
-}
-.card-image img{
-width:100%;
-height:300px;
-object-fit:contain;
-background:#f5f1eb;
-display:block;
-transition:transform .4s ease;
-}
+.section-header h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;margin-bottom:16px;}
+.section-header p{font-size:17px;color:#5c524a;line-height:1.7;max-width:680px;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+.card{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.06);transition:all .3s ease;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-8px);box-shadow:0 28px 65px rgba(0,0,0,0.11);}
+.card-image img{width:100%;height:300px;object-fit:contain;background:#f5f1eb;display:block;transition:transform .4s ease;}
 .card:hover .card-image img{transform:scale(1.03);}
-.card-body{
-padding:32px;flex:1;
-display:flex;flex-direction:column;
-}
-.card-tag{
-font-size:11px;font-weight:600;
-letter-spacing:0.08em;color:#8a9e87;
-text-transform:uppercase;margin-bottom:10px;
-}
-.card-title{
-font-size:22px;font-weight:600;margin-bottom:10px;
-}
-.card-desc{
-font-size:15px;color:#6b6158;
-line-height:1.65;flex:1;margin-bottom:24px;
-}
-.card-link{
-display:inline-flex;align-items:center;
-gap:8px;font-size:14px;font-weight:600;
-color:#2f2a26;transition:gap .2s;
-}
+.card-body{padding:32px;flex:1;display:flex;flex-direction:column;}
+.card-tag{font-size:11px;font-weight:600;letter-spacing:0.08em;color:#8a9e87;text-transform:uppercase;margin-bottom:10px;}
+.card-title{font-size:22px;font-weight:600;margin-bottom:10px;}
+.card-desc{font-size:15px;color:#6b6158;line-height:1.65;flex:1;margin-bottom:24px;}
+.card-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#2f2a26;transition:gap .2s;}
 .card-link:hover{gap:12px;}
 .card-link svg{width:16px;height:16px;}
-
-/* ── INSPIRATION BANNER ── */
-.inspiration-banner{
-max-width:1200px;
-margin:0 auto 100px;
-padding:0 40px;
-}
-.inspiration-inner{
-background:#2f2a26;
-border-radius:28px;
-padding:60px 70px;
-display:grid;
-grid-template-columns:1fr auto;
-align-items:center;
-gap:40px;
-}
-.inspiration-inner h2{
-font-family:'Cormorant Garamond', serif;
-font-size:40px;
-font-weight:600;
-color:#F5F1EB;
-margin-bottom:14px;
-}
-.inspiration-inner p{
-font-size:16px;
-color:#a89e94;
-line-height:1.7;
-max-width:560px;
-}
-.btn-light{
-display:inline-block;
-background:#F5F1EB;
-color:#2f2a26;
-padding:18px 40px;
-border-radius:16px;
-font-weight:600;
-font-size:15px;
-transition:all .25s ease;
-white-space:nowrap;
-flex-shrink:0;
-}
-.btn-light:hover{
-background:#fff;
-transform:translateY(-3px);
-}
-
-/* ── METHODOLOGY ── */
-.methodology{
-max-width:1200px;
-margin:auto;
-padding:80px 40px 100px;
-}
-
-/* ── RESPONSIVE ── */
+.inspiration-banner{max-width:1200px;margin:0 auto 100px;padding:0 40px;}
+.inspiration-inner{background:#2f2a26;border-radius:28px;padding:60px 70px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
+.inspiration-inner h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#F5F1EB;margin-bottom:14px;}
+.inspiration-inner p{font-size:16px;color:#a89e94;line-height:1.7;max-width:560px;}
+.btn-light{display:inline-block;background:#F5F1EB;color:#2f2a26;padding:18px 40px;border-radius:16px;font-weight:600;font-size:15px;transition:all .25s ease;white-space:nowrap;flex-shrink:0;}
+.btn-light:hover{background:#fff;transform:translateY(-3px);}
+.methodology{max-width:1200px;margin:auto;padding:80px 40px 100px;}
 @media(max-width:900px){
 .hero{padding:10px 20px 60px;}
-.hero-content{
-padding:36px 28px 40px;
-grid-template-columns:1fr;
-}
+.hero-content{padding:36px 28px 40px;grid-template-columns:1fr;}
 .hero-content h1{font-size:36px;}
 .hero-cta{text-align:left;}
 .hero-micro{text-align:left;}
@@ -189,10 +49,7 @@ grid-template-columns:1fr;
 .grid{grid-template-columns:1fr;}
 .methodology{padding:60px 20px 80px;}
 .inspiration-banner{padding:0 20px;margin-bottom:70px;}
-.inspiration-inner{
-padding:36px 28px;
-grid-template-columns:1fr;
-}
+.inspiration-inner{padding:36px 28px;grid-template-columns:1fr;}
 .inspiration-inner h2{font-size:32px;}
 }
 </style>
@@ -206,17 +63,6 @@ gtag('config', 'G-NN6HJ5XYS6');
 </script>
 </head>
 <body>
-
-<!-- SCROLL TO TOP -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
-</button>
-<script>
-const btn = document.getElementById('scrollTop');
-window.addEventListener('scroll', function(){
-btn.classList.toggle('visible', window.scrollY > 300);
-});
-</script>
 
 <!-- HAMBURGER MENU OVERLAY -->
 <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
@@ -232,7 +78,6 @@ btn.classList.toggle('visible', window.scrollY > 300);
 <div class="menu-body">
 <a class="menu-link" href="index.html" onclick="closeMenu()">Home</a>
 <div class="menu-divider"></div>
-<!-- EDITAR: agrega más categorías aquí cuando las tengas -->
 <div class="menu-section-title">Categories</div>
 <a class="menu-cat" href="safe-sleep.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Safe Sleep Essentials</a>
 <a class="menu-cat" href="furniture.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Nursery Furniture</a>
@@ -285,7 +130,6 @@ As an Amazon Associate, Little Haven earns from qualifying purchases.
 <h2>Nursery Essentials, Elevated</h2>
 <p>Thoughtfully organized guides across every category that matters — so you can build your nursery with total confidence.</p>
 </div>
-
 <div class="grid">
 
 <a href="safe-sleep.html" class="card">
@@ -418,7 +262,19 @@ As an Amazon Associate, Little Haven earns from qualifying purchases. When you c
 </div>
 </footer>
 
+<!-- SCROLL TO TOP — siempre al final del body -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
 <script>
+// Scroll to top
+const btn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function(){
+btn.classList.toggle('visible', window.scrollY > 300);
+});
+
+// Hamburger menu
 function toggleMenu(){
 var menu = document.getElementById('mobileMenu');
 var overlay = document.getElementById('menuOverlay');
