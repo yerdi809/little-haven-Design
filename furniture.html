@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,31 +10,12 @@
 <style>
 .container{max-width:1100px;margin:auto;padding:40px 40px 100px;}
 .page-header{margin-bottom:50px;}
-.badge{
-display:inline-block;background:#C4D0C1;color:#2f2a26;
-font-size:11px;font-weight:600;padding:5px 14px;
-border-radius:20px;margin-bottom:16px;
-letter-spacing:0.05em;text-transform:uppercase;
-}
-.page-header h1{
-font-family:'Cormorant Garamond', serif;
-font-size:52px;line-height:1.15;margin-bottom:16px;
-}
+.badge{display:inline-block;background:#C4D0C1;color:#2f2a26;font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;}
+.page-header h1{font-family:'Cormorant Garamond', serif;font-size:52px;line-height:1.15;margin-bottom:16px;}
 .page-header p{font-size:18px;line-height:1.7;color:#4b433d;max-width:780px;}
-.affiliate-note{
-font-size:13px;color:#8a8076;
-margin-bottom:40px;
-padding:12px 18px;
-background:#eee8e0;
-border-radius:10px;
-display:inline-block;
-}
+.affiliate-note{font-size:13px;color:#8a8076;margin-bottom:40px;padding:12px 18px;background:#eee8e0;border-radius:10px;display:inline-block;}
 .products{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:80px;}
-.product{
-background:#fff;border-radius:28px;overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,0.07);
-transition:all .3s ease;display:flex;flex-direction:column;
-}
+.product{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.07);transition:all .3s ease;display:flex;flex-direction:column;}
 .product:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,0.11);}
 .product-image img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s ease;}
 .product:hover .product-image img{transform:scale(1.03);}
@@ -43,11 +25,7 @@ transition:all .3s ease;display:flex;flex-direction:column;
 .product-brand{font-size:12px;color:#8a8076;margin-bottom:14px;}
 .product-body p{font-size:14px;color:#5c524a;line-height:1.65;margin-bottom:18px;flex:1;}
 .product-features{list-style:none;padding:0;margin:0 0 24px 0;}
-.product-features li{
-font-size:13px;color:#5c524a;padding:7px 0;
-border-bottom:1px solid #f0ece4;
-display:flex;align-items:center;gap:8px;
-}
+.product-features li{font-size:13px;color:#5c524a;padding:7px 0;border-bottom:1px solid #f0ece4;display:flex;align-items:center;gap:8px;}
 .product-features li:last-child{border-bottom:none;}
 .product-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C4D0C1;flex-shrink:0;}
 .why-section{margin-bottom:80px;}
@@ -58,34 +36,58 @@ display:flex;align-items:center;gap:8px;
 .page-header h1{font-size:36px;}
 }
 </style>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NN6HJ5XYS6');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NN6HJ5XYS6');
 </script>
 </head>
-  <!-- SCROLL TO TOP -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
-</button>
-<script>
-const btn = document.getElementById('scrollTop');
-window.addEventListener('scroll', function(){
-btn.classList.toggle('visible', window.scrollY > 300);
-});
-</script>
 <body>
 
+<!-- HAMBURGER MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<div class="menu-header">
+<span class="menu-logo">Little Haven</span>
+<button class="menu-close" onclick="closeMenu()">
+<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+</div>
+<div class="menu-body">
+<a class="menu-link" href="index.html" onclick="closeMenu()">Home</a>
+<div class="menu-divider"></div>
+<div class="menu-section-title">Categories</div>
+<a class="menu-cat" href="safe-sleep.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Safe Sleep Essentials</a>
+<a class="menu-cat" href="furniture.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Nursery Furniture</a>
+<a class="menu-cat" href="monitoring-safety.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Monitoring & Safety</a>
+<a class="menu-cat" href="air-quality.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Air Quality & Comfort</a>
+<div class="menu-divider"></div>
+<a class="menu-link" href="inspiration.html" onclick="closeMenu()">Inspiration</a>
+<a class="menu-link" href="about.html" onclick="closeMenu()">About</a>
+<a class="menu-link" href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+<div class="menu-footer">
+As an Amazon Associate, Little Haven earns from qualifying purchases.
+</div>
+</div>
+
+<!-- NAV -->
 <nav class="nav">
 <a class="nav-back" href="index.html">
 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
 Back
 </a>
 <div class="nav-logo"><a href="index.html">Little Haven</a></div>
-<div style="width:60px;"></div>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
 </nav>
 
 <div class="container">
@@ -96,14 +98,12 @@ Back
 <p>Thoughtfully selected nursery furniture that combines premium comfort, elegant design, and lasting quality — every piece chosen to make your nursery as beautiful as it is functional.</p>
 </div>
 
-<!-- AFFILIATE NOTE — NO BORRAR -->
 <div class="affiliate-note">
 Our recommendations include affiliate links — you pay the same price on Amazon, we may earn a small commission.
 </div>
 
 <div class="products">
 
-<!-- Producto 1 — Glider -->
 <div class="product">
 <div class="product-image">
 <img src="https://i.postimg.cc/wT23JKKt/Chat-GPT-Image-Mar-21-2026-05-44-28-PM.png" alt="Nursery Glider Power Recliner Chair">
@@ -119,12 +119,10 @@ Our recommendations include affiliate links — you pay the same price on Amazon
 <li>Built-in USB charging ports</li>
 <li>Premium leather — easy to clean</li>
 </ul>
-<!-- EDITAR: reemplaza # con tu link de afiliado -->
 <a class="btn-dark" href="https://amzn.to/3Pt4qBP">View on Amazon</a>
 </div>
 </div>
 
-<!-- Producto 2 — Changing Table + Dresser -->
 <div class="product">
 <div class="product-image">
 <img src="https://i.postimg.cc/jqXntYkm/Chat-GPT-Image-Mar-21-2026-03-57-17-PM.png" alt="Changing Table with Dresser">
@@ -140,12 +138,10 @@ Our recommendations include affiliate links — you pay the same price on Amazon
 <li>Max load 15kg — built to last</li>
 <li>150cm wide — generous storage space</li>
 </ul>
-<!-- EDITAR: reemplaza # con tu link de afiliado -->
 <a class="btn-dark" href="https://amzn.to/3NINtD2">View on Amazon</a>
 </div>
 </div>
 
-<!-- Producto 3 — Montessori Bookshelf -->
 <div class="product">
 <div class="product-image">
 <img src="https://i.postimg.cc/m2H82SKJ/Chat-GPT-Image-Mar-21-2026-05-49-07-PM.png" alt="Montessori Nursery Bookshelf">
@@ -161,7 +157,6 @@ Our recommendations include affiliate links — you pay the same price on Amazon
 <li>Compact size — fits any nursery</li>
 <li>Encourages independent reading habits</li>
 </ul>
-<!-- EDITAR: reemplaza # con tu link de afiliado -->
 <a class="btn-dark" href="https://amzn.to/4rHoDBA">View on Amazon</a>
 </div>
 </div>
@@ -239,6 +234,41 @@ As an Amazon Associate, Little Haven earns from qualifying purchases. When you c
 <div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
 </div>
 </footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+const btn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function(){
+btn.classList.toggle('visible', window.scrollY > 300);
+});
+function toggleMenu(){
+var menu = document.getElementById('mobileMenu');
+var overlay = document.getElementById('menuOverlay');
+var hamburger = document.getElementById('hamburger');
+var isOpen = menu.classList.contains('open');
+if(isOpen){
+menu.classList.remove('open');
+overlay.classList.remove('open');
+hamburger.classList.remove('open');
+document.body.style.overflow = '';
+} else {
+menu.classList.add('open');
+overlay.classList.add('open');
+hamburger.classList.add('open');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeMenu(){
+document.getElementById('mobileMenu').classList.remove('open');
+document.getElementById('menuOverlay').classList.remove('open');
+document.getElementById('hamburger').classList.remove('open');
+document.body.style.overflow = '';
+}
+</script>
 
 </body>
 </html>
