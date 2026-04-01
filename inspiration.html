@@ -1,268 +1,620 @@
-/* ============================================
-   LITTLE HAVEN — SHARED STYLES
-   ============================================ */
 
-*{box-sizing:border-box;margin:0;padding:0;}
-body{
-font-family:'Inter', sans-serif;
-background:#F5F1EB;
-color:#2f2a26;
-}
-a{text-decoration:none;color:inherit;}
-img{width:100%;display:block;}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nursery Inspiration — Little Haven</title>
+<meta name="description" content="Explore four curated nursery styles — Scandinavian, Boho, Minimalist and Cottagecore. Tap any red dot to shop directly on Amazon.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
 
-/* ── NAV ── */
-.nav{
-max-width:1200px;
-margin:auto;
-padding:32px 40px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-}
-.nav-logo{
-font-family:'Cormorant Garamond', serif;
-font-size:26px;
-font-weight:600;
-letter-spacing:0.01em;
-}
-.nav-logo a{color:#2f2a26;}
-.nav-tagline{
-font-size:13px;
-color:#8a8076;
-letter-spacing:0.04em;
-}
-.nav-back{
-font-size:14px;
-color:#6a615a;
-display:flex;
-align-items:center;
-gap:6px;
-transition:color .2s;
-}
-.nav-back:hover{color:#2f2a26;}
-.nav-back svg{width:16px;height:16px;}
+/* ── PAGE LAYOUT ── */
+.container{max-width:1100px;margin:auto;padding:40px 40px 100px;}
 
-/* ── BUTTONS ── */
-.btn-dark{
-display:inline-block;
-background:#2f2a26;
-color:#F5F1EB;
-padding:16px 36px;
-border-radius:16px;
-font-weight:600;
-font-size:15px;
-transition:all .25s ease;
+/* ── PAGE HEADER ── */
+.page-header{margin-bottom:50px;}
+.badge{
+  display:inline-block;background:#C4D0C1;color:#2f2a26;
+  font-size:11px;font-weight:600;padding:5px 14px;
+  border-radius:20px;margin-bottom:16px;
+  letter-spacing:0.05em;text-transform:uppercase;
 }
-.btn-dark:hover{
-background:#1a1714;
-transform:translateY(-3px);
+.page-header h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:52px;line-height:1.15;margin-bottom:16px;
 }
-.btn-green{
-display:inline-block;
-background:#C4D0C1;
-color:#2f2a26;
-padding:16px 36px;
-border-radius:16px;
-font-weight:600;
-font-size:15px;
-transition:all .25s ease;
-}
-.btn-green:hover{
-transform:translateY(-3px);
-box-shadow:0 12px 25px rgba(0,0,0,0.12);
-}
-.paid-link{
-font-size:11px;
-color:#8a8076;
-margin-left:6px;
-font-weight:400;
+.page-header p{font-size:18px;line-height:1.7;color:#4b433d;max-width:780px;}
+.affiliate-note{
+  font-size:13px;color:#8a8076;
+  margin-bottom:48px;padding:12px 18px;
+  background:#eee8e0;border-radius:10px;
+  display:inline-block;
 }
 
-/* ── SECTION LABELS ── */
-.section-label{
-font-size:11px;
-font-weight:600;
-letter-spacing:0.1em;
-color:#8a9e87;
-text-transform:uppercase;
-margin-bottom:14px;
+/* ── 4 STYLE ENTRY CARDS ── */
+.styles-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+
+.style-card{
+  background:#fff;border-radius:28px;overflow:hidden;
+  box-shadow:0 15px 40px rgba(0,0,0,0.07);
+  transition:all .3s ease;cursor:pointer;
+  position:relative;user-select:none;
+}
+.style-card:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,0.11);}
+.style-card.active{transform:translateY(-2px);box-shadow:0 20px 50px rgba(0,0,0,0.10);}
+
+/* Card thumbnail placeholder */
+.card-thumb{
+  width:100%;aspect-ratio:3/2;
+  display:flex;align-items:center;justify-content:center;
+  position:relative;overflow:hidden;
+}
+.card-thumb img{
+  position:absolute;inset:0;
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s ease;
+}
+.style-card:hover .card-thumb img{transform:scale(1.03);}
+.card-thumb svg{position:absolute;inset:0;width:100%;height:100%;opacity:0.13;}
+
+.ph-scandi{background:linear-gradient(145deg,#E5E0D8 0%,#CFC9BE 100%);}
+.ph-boho  {background:linear-gradient(145deg,#E3D4BE 0%,#CDBDA0 100%);}
+.ph-mini  {background:linear-gradient(145deg,#ECECEC 0%,#DCDAD6 100%);}
+.ph-cott  {background:linear-gradient(145deg,#D9E5D5 0%,#C2D4BB 100%);}
+
+/* Card label overlay */
+.card-overlay{
+  position:absolute;bottom:0;left:0;right:0;
+  padding:36px 28px 24px;
+  background:linear-gradient(to top,rgba(20,15,10,0.68) 0%,transparent 100%);
+}
+.card-overlay h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;font-weight:600;color:#fff;margin-bottom:4px;
+}
+.card-overlay span{
+  font-size:11px;letter-spacing:0.1em;
+  text-transform:uppercase;color:rgba(255,255,255,0.7);
 }
 
-/* ── TRUST STRIP (dark) ── */
-.trust-strip{
-background:#2f2a26;
-padding:80px 40px;
+/* Arrow toggle */
+.card-arrow{
+  position:absolute;top:16px;right:16px;
+  width:32px;height:32px;border-radius:50%;
+  background:rgba(255,255,255,0.2);
+  display:flex;align-items:center;justify-content:center;
+  transition:background 0.2s, transform 0.35s;
 }
-.trust-strip-inner{
-max-width:1200px;
-margin:auto;
-text-align:center;
-}
-.trust-strip h2{
-font-family:'Cormorant Garamond', serif;
-font-size:42px;
-color:#F5F1EB;
-margin-bottom:20px;
-}
-.trust-strip p{
-font-size:17px;
-color:#a89e94;
-line-height:1.8;
-max-width:760px;
-margin:0 auto 50px;
-}
-.trust-pillars{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:32px;
-max-width:900px;
-margin:0 auto;
-}
-.pillar{text-align:center;}
-.pillar-icon{
-width:44px;height:44px;
-border-radius:50%;
-background:rgba(196,208,193,0.15);
-margin:0 auto 16px;
-display:flex;align-items:center;justify-content:center;
-}
-.pillar-icon svg{
-width:20px;height:20px;
-stroke:#C4D0C1;fill:none;
-stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
-}
-.pillar h4{font-size:15px;font-weight:600;color:#F5F1EB;margin-bottom:8px;}
-.pillar p{font-size:13px;color:#7a706a;line-height:1.6;}
-
-/* ── WHITE CONTENT CARD ── */
-.content-card{
-background:#fff;
-border-radius:30px;
-padding:70px;
-box-shadow:0 18px 45px rgba(0,0,0,0.05);
-}
-.content-card h2{
-font-family:'Cormorant Garamond', serif;
-font-size:40px;
-margin-bottom:16px;
-}
-.content-card .lead{
-font-size:17px;
-color:#5c524a;
-line-height:1.8;
-max-width:800px;
-margin-bottom:50px;
+.style-card.active .card-arrow{background:#8a9e87;transform:rotate(180deg);}
+.card-arrow svg{
+  width:14px;height:14px;stroke:#fff;fill:none;
+  stroke-width:2;stroke-linecap:round;stroke-linejoin:round;
 }
 
-/* ── METHODOLOGY STEPS ── */
-.method-steps{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:40px;
-}
-.step{border-top:2px solid #C4D0C1;padding-top:24px;}
-.step-num{
-font-family:'Cormorant Garamond', serif;
-font-size:36px;font-weight:600;
-color:#C4D0C1;margin-bottom:12px;
-}
-.step h4{font-size:16px;font-weight:600;margin-bottom:10px;}
-.step p{font-size:14px;color:#6b6158;line-height:1.7;}
+/* ── ACCORDION ── */
+.accordion{max-height:0;overflow:hidden;transition:max-height 0.65s cubic-bezier(0.4,0,0.2,1);}
+.accordion.open{max-height:8000px;}
 
-/* ── COMPARISON TABLE ── */
-.compare-table{
-width:100%;border-collapse:collapse;font-size:15px;
+.accordion-body{
+  background:#fff;
+  border-radius:0 0 28px 28px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.08);
+  padding:40px 36px 44px;
+  margin-bottom:28px;
+  margin-top:-14px;
 }
-.compare-table th{
-background:#2f2a26;color:#F5F1EB;
-padding:14px 20px;text-align:left;font-weight:500;
-}
-.compare-table th:first-child{border-radius:12px 0 0 0;}
-.compare-table th:last-child{border-radius:0 12px 0 0;}
-.compare-table td{
-padding:14px 20px;
-border-bottom:1px solid #f0ece4;
-color:#4b433d;
-}
-.compare-table tr:nth-child(even) td{background:#faf8f5;}
-.compare-table tr:last-child td{border-bottom:none;}
 
-/* ── FOOTER ── */
-.footer{
-background:#EFE8DF;
-padding:50px 40px;
-text-align:center;
+.acc-head{margin-bottom:36px;padding-bottom:28px;border-bottom:1px solid #f0ece4;}
+.acc-head h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:36px;font-weight:600;margin-bottom:10px;color:#2f2a26;
 }
-.footer-inner{max-width:1200px;margin:auto;}
-.footer-logo{
-font-family:'Cormorant Garamond', serif;
-font-size:22px;font-weight:600;
-margin-bottom:16px;
+.acc-head p{font-size:15px;color:#5c524a;line-height:1.7;max-width:580px;}
+.acc-aff{
+  margin-top:16px;font-size:12px;color:#8a8076;
+  padding:10px 16px;background:#eee8e0;border-radius:10px;
+  display:inline-flex;align-items:center;gap:8px;
 }
-.footer-links{
-display:flex;justify-content:center;
-gap:32px;margin-bottom:24px;flex-wrap:wrap;
+.acc-aff::before{
+  content:'';display:inline-block;
+  width:8px;height:8px;background:#C0392B;
+  border-radius:50%;flex-shrink:0;
 }
-.footer-links a{
-font-size:13px;color:#6b6158;transition:color .2s;
-}
-.footer-links a:hover{color:#2f2a26;}
-.footer-disclaimer{
-font-size:13px;color:#5c524a;
-line-height:1.7;max-width:700px;
-margin:0 auto 16px;padding:16px;
-background:#e8e0d6;border-radius:10px;
-}
-.footer-copy{font-size:12px;color:#8a8076;}
 
-/* ── SCROLL TO TOP BUTTON ── */
-.scroll-top{
-position:fixed;
-bottom:32px;
-right:32px;
-width:48px;
-height:48px;
-background:#2f2a26;
-color:#F5F1EB;
-border:none;
-border-radius:50%;
-cursor:pointer;
-display:flex;
-align-items:center;
-justify-content:center;
-opacity:0;
-visibility:hidden;
-transition:all .3s ease;
-z-index:999;
-box-shadow:0 4px 16px rgba(0,0,0,0.2);
+/* ── ROOM SECTION ── */
+.room{margin-bottom:48px;}
+.room:last-child{margin-bottom:0;}
+.room-lbl{
+  font-size:11px;font-weight:600;letter-spacing:0.08em;
+  text-transform:uppercase;color:#8a8076;margin-bottom:14px;
 }
-.scroll-top.visible{
-opacity:1;
-visibility:visible;
+.room-lbl strong{color:#5c524a;}
+.room-div{border:none;border-top:1px solid #f0ece4;margin:44px 0;}
+
+/* ── SHOPPABLE IMAGE FRAME ── */
+.shoppable{
+  position:relative;border-radius:20px;
+  overflow:visible;aspect-ratio:16/9;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
 }
-.scroll-top:hover{
-background:#1a1714;
-transform:translateY(-3px);
+.room-ph{
+  width:100%;height:100%;border-radius:20px;
+  overflow:hidden;display:flex;
+  align-items:center;justify-content:center;
 }
-.scroll-top svg{
-width:20px;
-height:20px;
-stroke:#F5F1EB;
-fill:none;
-stroke-width:2;
-stroke-linecap:round;
-stroke-linejoin:round;
+.room-ph img{width:100%;height:100%;object-fit:cover;border-radius:20px;}
+.room-ph-lbl{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;font-style:italic;
+  color:rgba(44,37,25,0.28);pointer-events:none;
 }
+
+/* Room placeholder colors */
+.s1{background:#E0DBD2;}.s2{background:#D6D1C7;}.s3{background:#CCC7BC;}
+.b1{background:#DECCB2;}.b2{background:#D5C3A5;}.b3{background:#CCBA98;}
+.m1{background:#EBEBEB;}.m2{background:#E1E1E1;}.m3{background:#D7D7D7;}
+.c1{background:#D5E2CF;}.c2{background:#CADBC3;}.c3{background:#BED3B7;}
+
+/* ── RED DOTS ── */
+.dot{
+  position:absolute;width:28px;height:28px;
+  transform:translate(-50%,-50%);cursor:pointer;z-index:10;
+}
+.dot-ring{
+  position:absolute;inset:0;border-radius:50%;
+  background:rgba(192,57,43,0.28);
+  animation:pulse 2.2s ease-out infinite;
+}
+.dot-core{
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  width:14px;height:14px;background:#C0392B;
+  border-radius:50%;border:2.5px solid #fff;
+  box-shadow:0 2px 6px rgba(0,0,0,0.22);
+  transition:transform 0.18s;
+}
+.dot:hover .dot-core{transform:translate(-50%,-50%) scale(1.3);}
+@keyframes pulse{
+  0%{transform:scale(0.7);opacity:0.9;}
+  100%{transform:scale(2.5);opacity:0;}
+}
+.dot-tip{
+  position:absolute;bottom:calc(100% + 10px);left:50%;
+  transform:translateX(-50%);
+  background:#2f2a26;color:#fff;
+  font-size:12px;font-weight:500;white-space:nowrap;
+  padding:6px 12px;border-radius:8px;
+  pointer-events:none;opacity:0;transition:opacity 0.18s;z-index:50;
+}
+.dot-tip::after{
+  content:'';position:absolute;top:100%;left:50%;
+  transform:translateX(-50%);
+  border:5px solid transparent;border-top-color:#2f2a26;
+}
+.dot:hover .dot-tip{opacity:1;}
+
+/* ── PRODUCT TAGS ── */
+.ptags{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+.ptag{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;font-weight:500;color:#5c524a;
+  background:#f5f1eb;border:1px solid #e8e0d5;
+  padding:6px 14px;border-radius:20px;
+  text-decoration:none;transition:background 0.2s,color 0.2s;
+}
+.ptag:hover{background:#C4D0C1;color:#2f2a26;}
+.ptag-dot{width:6px;height:6px;background:#C0392B;border-radius:50%;flex-shrink:0;}
 
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
-.nav{padding:24px 20px;}
-.trust-strip{padding:60px 20px;}
-.trust-pillars{grid-template-columns:1fr;gap:24px;}
-.content-card{padding:36px 24px;}
-.method-steps{grid-template-columns:1fr;gap:28px;}
-.footer{padding:40px 20px;}
-.footer-links{gap:20px;}
-.scroll-top{bottom:20px;right:20px;}
+  .container{padding:30px 20px 80px;}
+  .styles-grid{grid-template-columns:1fr;}
+  .page-header h1{font-size:36px;}
+  .accordion-body{padding:28px 20px 32px;}
+  .acc-head h3{font-size:28px;}
 }
+
+</style>
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-NN6HJ5XYS6');
+</script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
+    Back
+  </a>
+  <div class="nav-logo"><a href="index.html">Little Haven</a></div>
+  <div style="width:60px;"></div>
+</nav>
+
+<div class="container">
+
+  <div class="page-header">
+    <div class="badge">Editor's Choice 2025</div>
+    <h1>Find Your Perfect Nursery Style</h1>
+    <p>Four curated aesthetics, each brought to life with hand-picked premium products. Tap any red dot to shop the look directly on Amazon.</p>
+  </div>
+
+  <div class="affiliate-note">
+    Our recommendations include affiliate links — you pay the same price on Amazon, we may earn a small commission.
+  </div>
+
+  <div class="styles-grid">
+
+    <!-- ══════════ SCANDINAVIAN ══════════ -->
+    <div>
+      <div class="style-card" id="card-scandi" onclick="toggle('scandi')">
+        <div class="card-thumb ph-scandi">
+          <!-- TO DO: add <img src="images/insp-scandi.jpg" alt="Scandinavian nursery"> -->
+          <svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="110" width="110" height="90" rx="3" fill="#2C2519"/><rect x="65" y="90" width="80" height="22" rx="2" fill="#2C2519"/><rect x="175" y="145" width="85" height="55" rx="2" fill="#2C2519"/><rect x="290" y="70" width="55" height="150" rx="2" fill="#2C2519"/><line x1="30" y1="240" x2="370" y2="240" stroke="#2C2519" stroke-width="4"/></svg>
+        </div>
+        <div class="card-overlay"><h2>Scandinavian</h2><span>Clean lines · Natural wood · Soft neutrals</span></div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="accordion" id="acc-scandi">
+        <div class="accordion-body">
+          <div class="acc-head">
+            <h3>Scandinavian Nursery</h3>
+            <p>Light-filled rooms, natural oak, and a palette of warm whites and soft grays. Every piece earns its place — nothing decorative, everything intentional.</p>
+            <div class="acc-aff">Tap any red dot to shop the look on Amazon — we may earn a small commission at no extra cost to you.</div>
+          </div>
+          <!-- S · Room 1 -->
+          <div class="room">
+            <div class="room-lbl">Room 01 &nbsp;·&nbsp; <strong>The Sleep Corner</strong></div>
+            <div class="shoppable">
+              <div class="room-ph s1"><span class="room-ph-lbl">Scandinavian · Sleep Corner</span></div>
+              <div class="dot" style="left:27%;top:54%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Convertible Crib — DaVinci</div></div>
+              <div class="dot" style="left:27%;top:74%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Organic Mattress — Newton</div></div>
+              <div class="dot" style="left:70%;top:28%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Arc Floor Lamp</div></div>
+              <div class="dot" style="left:68%;top:54%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Baby Monitor — Nanit Pro</div></div>
+              <div class="dot" style="left:44%;top:88%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Wool Nursery Rug — Lorena Canals</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Convertible Crib</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Organic Mattress</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Arc Floor Lamp</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Nanit Pro Monitor</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Wool Rug</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- S · Room 2 -->
+          <div class="room">
+            <div class="room-lbl">Room 02 &nbsp;·&nbsp; <strong>The Feeding Nook</strong></div>
+            <div class="shoppable">
+              <div class="room-ph s2"><span class="room-ph-lbl">Scandinavian · Feeding Nook</span></div>
+              <div class="dot" style="left:22%;top:50%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Power Glider Recliner</div></div>
+              <div class="dot" style="left:54%;top:62%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Solid Oak Side Table</div></div>
+              <div class="dot" style="left:76%;top:32%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Sound Machine — Hatch Rest+</div></div>
+              <div class="dot" style="left:38%;top:86%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Boucle Nursery Rug</div></div>
+              <div class="dot" style="left:14%;top:76%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Knit Throw Blanket</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Power Glider</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Oak Side Table</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Hatch Rest+</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Boucle Rug</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Knit Throw</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- S · Room 3 -->
+          <div class="room">
+            <div class="room-lbl">Room 03 &nbsp;·&nbsp; <strong>The Play & Learn Corner</strong></div>
+            <div class="shoppable">
+              <div class="room-ph s3"><span class="room-ph-lbl">Scandinavian · Play Corner</span></div>
+              <div class="dot" style="left:18%;top:55%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Montessori Bookshelf</div></div>
+              <div class="dot" style="left:44%;top:72%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Seagrass Toy Basket</div></div>
+              <div class="dot" style="left:68%;top:44%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Dresser + Changing Topper</div></div>
+              <div class="dot" style="left:80%;top:22%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Round Wall Mirror</div></div>
+              <div class="dot" style="left:33%;top:88%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Activity Play Mat</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Montessori Bookshelf</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Seagrass Basket</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Dresser + Changer</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Round Mirror</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Activity Play Mat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ BOHO ══════════ -->
+    <div>
+      <div class="style-card" id="card-boho" onclick="toggle('boho')">
+        <div class="card-thumb ph-boho">
+          <svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><ellipse cx="110" cy="160" rx="55" ry="70" fill="#2C2519"/><path d="M200 60 Q240 30 280 60 Q270 190 200 210 Q130 190 200 60Z" fill="#2C2519"/><rect x="300" y="130" width="60" height="90" rx="30" fill="#2C2519"/><ellipse cx="110" cy="235" rx="70" ry="10" fill="#2C2519" opacity="0.5"/></svg>
+        </div>
+        <div class="card-overlay"><h2>Boho</h2><span>Texture · Warmth · Organic layers</span></div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="accordion" id="acc-boho">
+        <div class="accordion-body">
+          <div class="acc-head">
+            <h3>Boho Nursery</h3>
+            <p>Layers of texture, woven rattan, macramé, and earthy warmth. A nursery that feels like a hug the moment you walk in.</p>
+            <div class="acc-aff">Tap any red dot to shop the look on Amazon — we may earn a small commission at no extra cost to you.</div>
+          </div>
+          <!-- B · Room 1 -->
+          <div class="room">
+            <div class="room-lbl">Room 01 &nbsp;·&nbsp; <strong>The Dreamy Sleep Space</strong></div>
+            <div class="shoppable">
+              <div class="room-ph b1"><span class="room-ph-lbl">Boho · Dreamy Sleep Space</span></div>
+              <div class="dot" style="left:25%;top:52%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Rattan Crib — Babyletto</div></div>
+              <div class="dot" style="left:50%;top:22%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Macramé Crib Canopy</div></div>
+              <div class="dot" style="left:75%;top:38%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Rattan Pendant Light</div></div>
+              <div class="dot" style="left:40%;top:86%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Jute Area Rug</div></div>
+              <div class="dot" style="left:13%;top:74%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Woven Storage Basket Set</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Rattan Crib</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Macramé Canopy</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Rattan Pendant Light</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Jute Rug</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Basket Set</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- B · Room 2 -->
+          <div class="room">
+            <div class="room-lbl">Room 02 &nbsp;·&nbsp; <strong>The Cozy Feeding Nook</strong></div>
+            <div class="shoppable">
+              <div class="room-ph b2"><span class="room-ph-lbl">Boho · Cozy Feeding Nook</span></div>
+              <div class="dot" style="left:20%;top:50%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Glider Recliner Chair</div></div>
+              <div class="dot" style="left:56%;top:30%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Macramé Wall Hanging — Large</div></div>
+              <div class="dot" style="left:74%;top:72%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Terracotta Woven Rug</div></div>
+              <div class="dot" style="left:36%;top:80%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Faux Trailing Plant</div></div>
+              <div class="dot" style="left:82%;top:35%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Macramé Floating Shelf</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Glider Recliner</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Macramé Wall Hanging</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Woven Rug</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Faux Trailing Plant</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Macramé Shelf</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- B · Room 3 -->
+          <div class="room">
+            <div class="room-lbl">Room 03 &nbsp;·&nbsp; <strong>The Boho Play Corner</strong></div>
+            <div class="shoppable">
+              <div class="room-ph b3"><span class="room-ph-lbl">Boho · Play Corner</span></div>
+              <div class="dot" style="left:18%;top:42%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Cotton Canvas Teepee</div></div>
+              <div class="dot" style="left:50%;top:26%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Felt Ball Crib Mobile</div></div>
+              <div class="dot" style="left:76%;top:48%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Natural Wicker Bookshelf</div></div>
+              <div class="dot" style="left:33%;top:84%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Pampas Grass Decor Set</div></div>
+              <div class="dot" style="left:60%;top:72%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Boho Activity Gym</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Cotton Teepee</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Felt Ball Mobile</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Wicker Bookshelf</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Pampas Grass Decor</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Boho Activity Gym</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ MINIMALIST ══════════ -->
+    <div>
+      <div class="style-card" id="card-mini" onclick="toggle('mini')">
+        <div class="card-thumb ph-mini">
+          <svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><rect x="60" y="120" width="120" height="80" rx="2" fill="#2C2519"/><rect x="72" y="100" width="96" height="22" rx="1" fill="#2C2519"/><rect x="200" y="140" width="140" height="60" rx="2" fill="#2C2519"/><line x1="30" y1="238" x2="370" y2="238" stroke="#2C2519" stroke-width="5"/></svg>
+        </div>
+        <div class="card-overlay"><h2>Minimalist</h2><span>White space · Function · Serene calm</span></div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="accordion" id="acc-mini">
+        <div class="accordion-body">
+          <div class="acc-head">
+            <h3>Minimalist Nursery</h3>
+            <p>Nothing extra. Nothing missing. White space, quiet function, and a serene palette that lets your baby — not the decor — take center stage.</p>
+            <div class="acc-aff">Tap any red dot to shop the look on Amazon — we may earn a small commission at no extra cost to you.</div>
+          </div>
+          <!-- M · Room 1 -->
+          <div class="room">
+            <div class="room-lbl">Room 01 &nbsp;·&nbsp; <strong>The Pure Sleep Room</strong></div>
+            <div class="shoppable">
+              <div class="room-ph m1"><span class="room-ph-lbl">Minimalist · Pure Sleep Room</span></div>
+              <div class="dot" style="left:30%;top:54%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">White Convertible Crib</div></div>
+              <div class="dot" style="left:62%;top:32%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Baby Monitor — Nanit Pro</div></div>
+              <div class="dot" style="left:80%;top:58%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Dyson Air Purifier</div></div>
+              <div class="dot" style="left:44%;top:87%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Minimal Cream Loop Rug</div></div>
+              <div class="dot" style="left:16%;top:76%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Canopy Humidifier</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>White Convertible Crib</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Nanit Pro Monitor</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Dyson Air Purifier</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Cream Loop Rug</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Canopy Humidifier</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- M · Room 2 -->
+          <div class="room">
+            <div class="room-lbl">Room 02 &nbsp;·&nbsp; <strong>The Calm Changing Station</strong></div>
+            <div class="shoppable">
+              <div class="room-ph m2"><span class="room-ph-lbl">Minimalist · Changing Station</span></div>
+              <div class="dot" style="left:28%;top:46%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Dresser + Changing Topper</div></div>
+              <div class="dot" style="left:64%;top:38%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Round Wall Mirror — Umbra</div></div>
+              <div class="dot" style="left:82%;top:62%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Govee Temp + Humidity Sensor</div></div>
+              <div class="dot" style="left:14%;top:68%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Felt Diaper Caddy</div></div>
+              <div class="dot" style="left:46%;top:84%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Organic Changing Pad</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Dresser + Changer</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Round Wall Mirror</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Govee Sensor</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Diaper Caddy</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Changing Pad</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- M · Room 3 -->
+          <div class="room">
+            <div class="room-lbl">Room 03 &nbsp;·&nbsp; <strong>The Serene Feeding Corner</strong></div>
+            <div class="shoppable">
+              <div class="room-ph m3"><span class="room-ph-lbl">Minimalist · Feeding Corner</span></div>
+              <div class="dot" style="left:22%;top:50%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Minimalist Glider — Ivory</div></div>
+              <div class="dot" style="left:58%;top:36%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Sound Machine — Baby Brezza</div></div>
+              <div class="dot" style="left:76%;top:64%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Blackout Curtains — White Linen</div></div>
+              <div class="dot" style="left:36%;top:86%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Minimal Side Table</div></div>
+              <div class="dot" style="left:82%;top:28%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Woven Wall Hanging</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Minimalist Glider</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Baby Brezza Sound Machine</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Blackout Curtains</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Side Table</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Woven Wall Hanging</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════ COTTAGECORE ══════════ -->
+    <div>
+      <div class="style-card" id="card-cott" onclick="toggle('cott')">
+        <div class="card-thumb ph-cott">
+          <svg viewBox="0 0 400 270" xmlns="http://www.w3.org/2000/svg"><path d="M70 220 Q70 120 120 120 Q170 120 170 220Z" fill="#2C2519"/><circle cx="290" cy="90" r="45" fill="#2C2519" opacity="0.7"/><circle cx="315" cy="128" r="32" fill="#2C2519" opacity="0.6"/><rect x="275" y="148" width="12" height="72" fill="#2C2519"/><rect x="195" y="145" width="70" height="65" rx="3" fill="#2C2519"/></svg>
+        </div>
+        <div class="card-overlay"><h2>Cottagecore</h2><span>Floral · Cozy · Storybook charm</span></div>
+        <div class="card-arrow"><svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg></div>
+      </div>
+      <div class="accordion" id="acc-cott">
+        <div class="accordion-body">
+          <div class="acc-head">
+            <h3>Cottagecore Nursery</h3>
+            <p>Soft florals, vintage-inspired wood, and the gentle magic of a storybook. A space where every detail whispers warmth and wonder.</p>
+            <div class="acc-aff">Tap any red dot to shop the look on Amazon — we may earn a small commission at no extra cost to you.</div>
+          </div>
+          <!-- C · Room 1 -->
+          <div class="room">
+            <div class="room-lbl">Room 01 &nbsp;·&nbsp; <strong>The Enchanted Sleep Nook</strong></div>
+            <div class="shoppable">
+              <div class="room-ph c1"><span class="room-ph-lbl">Cottagecore · Enchanted Sleep Nook</span></div>
+              <div class="dot" style="left:26%;top:52%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Vintage-Style Wood Crib</div></div>
+              <div class="dot" style="left:50%;top:20%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Floral Muslin Canopy</div></div>
+              <div class="dot" style="left:74%;top:42%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Linen Floral Curtains</div></div>
+              <div class="dot" style="left:14%;top:72%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Floral Knit Baby Blanket</div></div>
+              <div class="dot" style="left:43%;top:88%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Vintage Braided Oval Rug</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Wood Crib</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Floral Canopy</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Linen Curtains</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Knit Baby Blanket</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Braided Oval Rug</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- C · Room 2 -->
+          <div class="room">
+            <div class="room-lbl">Room 02 &nbsp;·&nbsp; <strong>The Garden Reading Corner</strong></div>
+            <div class="shoppable">
+              <div class="room-ph c2"><span class="room-ph-lbl">Cottagecore · Garden Reading Corner</span></div>
+              <div class="dot" style="left:20%;top:50%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Upholstered Rocking Chair</div></div>
+              <div class="dot" style="left:54%;top:44%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Montessori Bookshelf — Natural</div></div>
+              <div class="dot" style="left:76%;top:28%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Faux Eucalyptus Garland</div></div>
+              <div class="dot" style="left:38%;top:82%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Stuffed Animal Collection</div></div>
+              <div class="dot" style="left:82%;top:68%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Mushroom Nightlight</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Rocking Chair</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Montessori Bookshelf</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Eucalyptus Garland</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Stuffed Animals</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Mushroom Nightlight</a>
+            </div>
+          </div>
+          <hr class="room-div">
+          <!-- C · Room 3 -->
+          <div class="room">
+            <div class="room-lbl">Room 03 &nbsp;·&nbsp; <strong>The Changing & Dressing Alcove</strong></div>
+            <div class="shoppable">
+              <div class="room-ph c3"><span class="room-ph-lbl">Cottagecore · Changing Alcove</span></div>
+              <div class="dot" style="left:28%;top:48%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Cottage Dresser + Changer</div></div>
+              <div class="dot" style="left:62%;top:30%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Wooden Wall Hooks — Mushroom</div></div>
+              <div class="dot" style="left:80%;top:55%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Vintage Oval Mirror</div></div>
+              <div class="dot" style="left:14%;top:66%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Wicker Storage Baskets</div></div>
+              <div class="dot" style="left:46%;top:86%;" onclick="go('https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20')"><div class="dot-ring"></div><div class="dot-core"></div><div class="dot-tip">Floral Changing Pad Cover</div></div>
+            </div>
+            <div class="ptags">
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Dresser + Changer</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Mushroom Wall Hooks</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Oval Mirror</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Wicker Baskets</a>
+              <a class="ptag" href="https://www.amazon.com/dp/ASIN_HERE?tag=littlehave0d-20" target="_blank" rel="nofollow sponsored"><span class="ptag-dot"></span>Floral Changing Pad Cover</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /styles-grid -->
+</div><!-- /container -->
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-logo">Little Haven</div>
+    <div class="footer-links">
+      <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="about.html">About</a>
+      <a href="index.html">Home</a>
+    </div>
+    <div class="footer-disclaimer">
+      As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.
+    </div>
+    <div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- SCROLL TO TOP — correctly inside body, uses style.css class -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+  <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+// Scroll to top visibility
+const btn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function(){
+  btn.classList.toggle('visible', window.scrollY > 300);
+});
+
+// Accordion toggle
+function toggle(id){
+  var acc = document.getElementById('acc-'+id);
+  var card = document.getElementById('card-'+id);
+  var open = acc.classList.contains('open');
+  acc.classList.toggle('open', !open);
+  card.classList.toggle('active', !open);
+}
+
+// Go to Amazon
+function go(url){
+  window.open(url, '_blank', 'noopener');
+}
+</script>
+
+</body>
+</html>
