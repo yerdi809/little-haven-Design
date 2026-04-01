@@ -10,62 +10,19 @@
 <style>
 .container{max-width:800px;margin:auto;padding:40px 40px 100px;}
 .page-header{margin-bottom:60px;}
-.page-header h1{
-font-family:'Cormorant Garamond', serif;
-font-size:48px;line-height:1.15;margin-bottom:16px;
-}
-.page-header p{
-font-size:18px;color:#5c524a;line-height:1.7;
-}
-.contact-body{
-background:#fff;border-radius:28px;
-padding:60px;
-box-shadow:0 15px 40px rgba(0,0,0,0.05);
-}
-.contact-body h2{
-font-family:'Cormorant Garamond', serif;
-font-size:28px;margin-bottom:16px;
-}
-.contact-body p{
-font-size:16px;color:#5c524a;
-line-height:1.8;margin-bottom:24px;
-}
-/* EDITAR: reemplaza con tu email real */
-.email-card{
-background:#F5F1EB;
-border-radius:16px;
-padding:28px 32px;
-margin:32px 0;
-display:flex;
-align-items:center;
-gap:16px;
-}
-.email-icon{
-width:44px;height:44px;border-radius:50%;
-background:#C4D0C1;flex-shrink:0;
-display:flex;align-items:center;justify-content:center;
-}
-.email-icon svg{
-width:20px;height:20px;
-stroke:#2f2a26;fill:none;
-stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;
-}
+.page-header h1{font-family:'Cormorant Garamond', serif;font-size:48px;line-height:1.15;margin-bottom:16px;}
+.page-header p{font-size:18px;color:#5c524a;line-height:1.7;}
+.contact-body{background:#fff;border-radius:28px;padding:60px;box-shadow:0 15px 40px rgba(0,0,0,0.05);}
+.contact-body h2{font-family:'Cormorant Garamond', serif;font-size:28px;margin-bottom:16px;}
+.contact-body p{font-size:16px;color:#5c524a;line-height:1.8;margin-bottom:24px;}
+.email-card{background:#F5F1EB;border-radius:16px;padding:28px 32px;margin:32px 0;display:flex;align-items:center;gap:16px;}
+.email-icon{width:44px;height:44px;border-radius:50%;background:#C4D0C1;flex-shrink:0;display:flex;align-items:center;justify-content:center;}
+.email-icon svg{width:20px;height:20px;stroke:#2f2a26;fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
 .email-info p{margin:0;font-size:14px;color:#8a8076;margin-bottom:4px;}
-/* EDITAR: reemplaza con tu email real */
-.email-info a{
-font-size:17px;font-weight:600;
-color:#2f2a26;text-decoration:none;
-transition:opacity .2s;
-}
+.email-info a{font-size:17px;font-weight:600;color:#2f2a26;text-decoration:none;transition:opacity .2s;}
 .email-info a:hover{opacity:0.7;}
-.topics{
-display:grid;grid-template-columns:1fr 1fr;
-gap:16px;margin-top:32px;
-}
-.topic{
-background:#F5F1EB;
-border-radius:14px;padding:20px;
-}
+.topics{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px;}
+.topic{background:#F5F1EB;border-radius:14px;padding:20px;}
 .topic h4{font-size:14px;font-weight:600;margin-bottom:6px;}
 .topic p{font-size:13px;color:#6b6158;line-height:1.5;margin:0;}
 @media(max-width:900px){
@@ -76,34 +33,58 @@ border-radius:14px;padding:20px;
 .email-card{flex-direction:column;text-align:center;}
 }
 </style>
-  <!-- Google tag (gtag.js) -->
+<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-NN6HJ5XYS6');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-NN6HJ5XYS6');
 </script>
 </head>
-  <!-- SCROLL TO TOP -->
-<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
-</button>
-<script>
-const btn = document.getElementById('scrollTop');
-window.addEventListener('scroll', function(){
-btn.classList.toggle('visible', window.scrollY > 300);
-});
-</script>
 <body>
 
+<!-- HAMBURGER MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+<div class="menu-header">
+<span class="menu-logo">Little Haven</span>
+<button class="menu-close" onclick="closeMenu()">
+<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+</div>
+<div class="menu-body">
+<a class="menu-link" href="index.html" onclick="closeMenu()">Home</a>
+<div class="menu-divider"></div>
+<div class="menu-section-title">Categories</div>
+<a class="menu-cat" href="safe-sleep.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Safe Sleep Essentials</a>
+<a class="menu-cat" href="furniture.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Nursery Furniture</a>
+<a class="menu-cat" href="monitoring-safety.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Monitoring & Safety</a>
+<a class="menu-cat" href="air-quality.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Air Quality & Comfort</a>
+<div class="menu-divider"></div>
+<a class="menu-link" href="inspiration.html" onclick="closeMenu()">Inspiration</a>
+<a class="menu-link" href="about.html" onclick="closeMenu()">About</a>
+<a class="menu-link" href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+<div class="menu-footer">
+As an Amazon Associate, Little Haven earns from qualifying purchases.
+</div>
+</div>
+
+<!-- NAV -->
 <nav class="nav">
 <a class="nav-back" href="index.html">
 <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>
 Back
 </a>
 <div class="nav-logo"><a href="index.html">Little Haven</a></div>
-<div style="width:60px;"></div>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()">
+<span></span>
+<span></span>
+<span></span>
+</button>
 </nav>
 
 <div class="container">
@@ -116,18 +97,15 @@ Back
 <div class="contact-body">
 
 <h2>Send us a message</h2>
-<p>
-We read every message personally and do our best to respond within 1–2 business days.
-</p>
+<p>We read every message personally and do our best to respond within 1–2 business days.</p>
 
-<!-- EDITAR: reemplaza hello@littlehaven.com con tu email real -->
+<!-- EDITAR: reemplaza con tu email real -->
 <div class="email-card">
 <div class="email-icon">
 <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
 </div>
 <div class="email-info">
 <p>Email us at</p>
-<!-- EDITAR: reemplaza con tu email real -->
 <a href="mailto:hello@littlehaven.com">hello@littlehaven.com</a>
 </div>
 </div>
@@ -171,6 +149,41 @@ As an Amazon Associate, Little Haven earns from qualifying purchases. When you c
 <div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
 </div>
 </footer>
+
+<!-- SCROLL TO TOP -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+<svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<script>
+const btn = document.getElementById('scrollTop');
+window.addEventListener('scroll', function(){
+btn.classList.toggle('visible', window.scrollY > 300);
+});
+function toggleMenu(){
+var menu = document.getElementById('mobileMenu');
+var overlay = document.getElementById('menuOverlay');
+var hamburger = document.getElementById('hamburger');
+var isOpen = menu.classList.contains('open');
+if(isOpen){
+menu.classList.remove('open');
+overlay.classList.remove('open');
+hamburger.classList.remove('open');
+document.body.style.overflow = '';
+} else {
+menu.classList.add('open');
+overlay.classList.add('open');
+hamburger.classList.add('open');
+document.body.style.overflow = 'hidden';
+}
+}
+function closeMenu(){
+document.getElementById('mobileMenu').classList.remove('open');
+document.getElementById('menuOverlay').classList.remove('open');
+document.getElementById('hamburger').classList.remove('open');
+document.body.style.overflow = '';
+}
+</script>
 
 </body>
 </html>
