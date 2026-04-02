@@ -15,7 +15,7 @@
 .hero-content p{font-size:18px;line-height:1.7;color:#5c524a;max-width:560px;}
 .hero-cta{text-align:right;flex-shrink:0;}
 .hero-micro{margin-top:12px;font-size:12px;color:#8a8076;text-align:right;}
-.categories{max-width:1200px;margin:auto;padding:0 40px 100px;}
+.categories{max-width:1200px;margin:auto;padding:0 40px 60px;}
 .section-header{margin-bottom:60px;}
 .section-header h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;margin-bottom:16px;}
 .section-header p{font-size:17px;color:#5c524a;line-height:1.7;max-width:680px;}
@@ -31,6 +31,26 @@
 .card-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#2f2a26;transition:gap .2s;}
 .card-link:hover{gap:12px;}
 .card-link svg{width:16px;height:16px;}
+.all-categories-btn{
+max-width:1200px;margin:0 auto 100px;padding:0 40px;
+text-align:center;
+}
+.btn-outline{
+display:inline-flex;align-items:center;gap:10px;
+border:2px solid #2f2a26;
+color:#2f2a26;
+padding:16px 40px;
+border-radius:16px;
+font-weight:600;
+font-size:15px;
+transition:all .25s ease;
+}
+.btn-outline:hover{
+background:#2f2a26;
+color:#F5F1EB;
+transform:translateY(-3px);
+}
+.btn-outline svg{width:16px;height:16px;}
 .inspiration-banner{max-width:1200px;margin:0 auto 100px;padding:0 40px;}
 .inspiration-inner{background:#2f2a26;border-radius:28px;padding:60px 70px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
 .inspiration-inner h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#F5F1EB;margin-bottom:14px;}
@@ -44,15 +64,15 @@
 .hero-content h1{font-size:36px;}
 .hero-cta{text-align:left;}
 .hero-micro{text-align:left;}
-.categories{padding:0 20px 70px;}
+.categories{padding:0 20px 60px;}
 .grid{grid-template-columns:1fr;}
+.all-categories-btn{padding:0 20px;margin-bottom:70px;}
 .methodology{padding:60px 20px 80px;}
 .inspiration-banner{padding:0 20px;margin-bottom:70px;}
 .inspiration-inner{padding:36px 28px;grid-template-columns:1fr;}
 .inspiration-inner h2{font-size:32px;}
 }
 </style>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -93,9 +113,7 @@ gtag('config', 'G-NN6HJ5XYS6');
 <a class="menu-link" href="about.html" onclick="closeMenu()">About</a>
 <a class="menu-link" href="contact.html" onclick="closeMenu()">Contact</a>
 </div>
-<div class="menu-footer">
-As an Amazon Associate, Little Haven earns from qualifying purchases.
-</div>
+<div class="menu-footer">As an Amazon Associate, Little Haven earns from qualifying purchases.</div>
 </div>
 
 <!-- NAV -->
@@ -103,9 +121,7 @@ As an Amazon Associate, Little Haven earns from qualifying purchases.
 <div class="nav-logo">Little Haven</div>
 <div class="nav-tagline">Premium Nursery Essentials</div>
 <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-<span></span>
-<span></span>
-<span></span>
+<span></span><span></span><span></span>
 </button>
 </nav>
 
@@ -128,12 +144,12 @@ As an Amazon Associate, Little Haven earns from qualifying purchases.
 </div>
 </section>
 
-<!-- CATEGORIES -->
+<!-- TOP CATEGORIES -->
 <section class="categories" id="categories">
 <div class="section-header">
-<div class="section-label">Curated Collections</div>
-<h2>Nursery Essentials, Elevated</h2>
-<p>Thoughtfully organized guides across every category that matters — so you can build your nursery with total confidence.</p>
+<div class="section-label">Most Popular</div>
+<h2>Our Top Categories</h2>
+<p>The categories parents visit most — curated, tested, and trusted by thousands of families building their perfect nursery.</p>
 </div>
 <div class="grid">
 
@@ -161,6 +177,18 @@ As an Amazon Associate, Little Haven earns from qualifying purchases.
 </div>
 </a>
 
+<a href="travel-gear.html" class="card">
+<div class="card-image">
+<img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Travel+Gear" alt="Travel Gear and Car Seats">
+</div>
+<div class="card-body">
+<div class="card-tag">Travel</div>
+<div class="card-title">Travel Gear & Car Seats</div>
+<div class="card-desc">Best-in-class car seats, strollers, and travel systems — selected for maximum safety and effortless daily use.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
 <a href="monitoring-safety.html" class="card">
 <div class="card-image">
 <img src="https://i.postimg.cc/Jnt7LSD4/Chat-GPT-Image-Mar-21-2026-04-12-06-PM.png" alt="Premium baby monitor">
@@ -173,20 +201,16 @@ As an Amazon Associate, Little Haven earns from qualifying purchases.
 </div>
 </a>
 
-<a href="air-quality.html" class="card">
-<div class="card-image">
-<img src="https://i.postimg.cc/QCYXV3Pp/Chat-GPT-Image-Mar-21-2026-04-31-45-PM.png" alt="Clean nursery environment">
-</div>
-<div class="card-body">
-<div class="card-tag">Wellness</div>
-<div class="card-title">Air Quality & Comfort</div>
-<div class="card-desc">Premium air purifiers, humidifiers, and comfort essentials that ensure your baby always breathes clean, healthy air.</div>
-<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
-</div>
-</a>
-
 </div>
 </section>
+
+<!-- ALL CATEGORIES BUTTON -->
+<div class="all-categories-btn">
+<a href="categories.html" class="btn-outline">
+Explore All 10 Categories
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+</a>
+</div>
 
 <!-- INSPIRATION BANNER -->
 <section class="inspiration-banner">
@@ -257,6 +281,7 @@ As an Amazon Associate, Little Haven earns from qualifying purchases.
 <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="about.html">About</a>
+<a href="categories.html">All Categories</a>
 <a href="inspiration.html">Inspiration</a>
 <a href="contact.html">Contact</a>
 </div>
@@ -267,41 +292,29 @@ As an Amazon Associate, Little Haven earns from qualifying purchases. When you c
 </div>
 </footer>
 
-<!-- SCROLL TO TOP — siempre al final del body -->
+<!-- SCROLL TO TOP -->
 <button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
 <svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg>
 </button>
 
 <script>
-// Scroll to top
 const btn = document.getElementById('scrollTop');
 window.addEventListener('scroll', function(){
 btn.classList.toggle('visible', window.scrollY > 300);
 });
-
-// Hamburger menu
 function toggleMenu(){
 var menu = document.getElementById('mobileMenu');
 var overlay = document.getElementById('menuOverlay');
 var hamburger = document.getElementById('hamburger');
 var isOpen = menu.classList.contains('open');
-if(isOpen){
-menu.classList.remove('open');
-overlay.classList.remove('open');
-hamburger.classList.remove('open');
-document.body.style.overflow = '';
-} else {
-menu.classList.add('open');
-overlay.classList.add('open');
-hamburger.classList.add('open');
-document.body.style.overflow = 'hidden';
-}
+if(isOpen){menu.classList.remove('open');overlay.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}
+else{menu.classList.add('open');overlay.classList.add('open');hamburger.classList.add('open');document.body.style.overflow='hidden';}
 }
 function closeMenu(){
 document.getElementById('mobileMenu').classList.remove('open');
 document.getElementById('menuOverlay').classList.remove('open');
 document.getElementById('hamburger').classList.remove('open');
-document.body.style.overflow = '';
+document.body.style.overflow='';
 }
 </script>
 
