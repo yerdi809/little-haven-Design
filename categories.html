@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Categories — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:1200px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:60px;}
+.badge{display:inline-block;background:#C4D0C1;color:#2f2a26;font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;}
+.page-header h1{font-family:'Cormorant Garamond',serif;font-size:52px;line-height:1.15;margin-bottom:16px;}
+.page-header p{font-size:18px;line-height:1.7;color:#4b433d;max-width:780px;}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;}
+.card{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.06);transition:all .3s ease;display:flex;flex-direction:column;}
+.card:hover{transform:translateY(-8px);box-shadow:0 28px 65px rgba(0,0,0,0.11);}
+.card-image img{width:100%;height:280px;object-fit:contain;background:#f5f1eb;display:block;transition:transform .4s ease;}
+.card:hover .card-image img{transform:scale(1.03);}
+.card-body{padding:28px;flex:1;display:flex;flex-direction:column;}
+.card-tag{font-size:11px;font-weight:600;letter-spacing:0.08em;color:#8a9e87;text-transform:uppercase;margin-bottom:10px;}
+.card-title{font-size:20px;font-weight:600;margin-bottom:10px;}
+.card-desc{font-size:14px;color:#6b6158;line-height:1.65;flex:1;margin-bottom:20px;}
+.card-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#2f2a26;transition:gap .2s;}
+.card-link:hover{gap:12px;}
+.card-link svg{width:16px;height:16px;}
+.section-divider{
+max-width:1200px;margin:0 auto 48px;padding:0 40px;
+}
+.divider-label{
+font-size:11px;font-weight:600;letter-spacing:0.1em;
+color:#8a9e87;text-transform:uppercase;
+display:flex;align-items:center;gap:16px;margin-bottom:0;
+}
+.divider-label::after{
+content:'';flex:1;height:1px;background:#f0ece4;
+}
+@media(max-width:900px){
+.container{padding:30px 20px 80px;}
+.grid{grid-template-columns:1fr;}
+.page-header h1{font-size:36px;}
+.section-divider{padding:0 20px;}
+}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NN6HJ5XYS6');</script>
+</head>
+<body>
+
+<!-- HAMBURGER MENU OVERLAY -->
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+<div class="menu-header">
+<span class="menu-logo">Little Haven</span>
+<button class="menu-close" onclick="closeMenu()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+</div>
+<div class="menu-body">
+<a class="menu-link" href="index.html" onclick="closeMenu()">Home</a>
+<div class="menu-divider"></div>
+<div class="menu-section-title">Categories</div>
+<a class="menu-cat" href="safe-sleep.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Safe Sleep Essentials</a>
+<a class="menu-cat" href="furniture.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Nursery Furniture</a>
+<a class="menu-cat" href="monitoring-safety.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Monitoring & Safety</a>
+<a class="menu-cat" href="air-quality.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Air Quality & Comfort</a>
+<a class="menu-cat" href="bath-time.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Bath Time Essentials</a>
+<a class="menu-cat" href="feeding-nursing.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Feeding & Nursing</a>
+<a class="menu-cat" href="travel-gear.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Travel Gear & Car Seats</a>
+<a class="menu-cat" href="baby-clothing.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Baby Clothing & Accessories</a>
+<a class="menu-cat" href="playtime.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Playtime & Activity</a>
+<a class="menu-cat" href="diapering.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Diapering Essentials</a>
+<div class="menu-divider"></div>
+<a class="menu-link" href="inspiration.html" onclick="closeMenu()">Inspiration</a>
+<a class="menu-link" href="about.html" onclick="closeMenu()">About</a>
+<a class="menu-link" href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+<div class="menu-footer">As an Amazon Associate, Little Haven earns from qualifying purchases.</div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+<a class="nav-back" href="index.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>Back</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+
+<div class="container">
+<div class="page-header">
+<div class="badge">All Collections</div>
+<h1>Every Category, Curated</h1>
+<p>Ten complete guides covering every aspect of your baby's first year — from sleep to play, travel to bath time. Every product independently selected for quality, safety, and design.</p>
+</div>
+
+<!-- 6 NEW CATEGORIES FIRST -->
+<div class="grid" style="margin-bottom:28px;">
+
+<a href="bath-time.html" class="card">
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Bath+Time" alt="Bath Time Essentials"></div>
+<div class="card-body">
+<div class="card-tag">Bath</div>
+<div class="card-title">Bath Time Essentials</div>
+<div class="card-desc">Ultra-soft tubs, premium towels, and bath essentials that make every bath a calm, luxurious ritual.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="feeding-nursing.html" class="card">
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Feeding+%26+Nursing" alt="Feeding and Nursing"></div>
+<div class="card-body">
+<div class="card-tag">Feeding</div>
+<div class="card-title">Feeding & Nursing</div>
+<div class="card-desc">Premium pumps, iconic high chairs, and feeding essentials that support every stage of your baby's nourishment.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="travel-gear.html" class="card">
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Travel+Gear" alt="Travel Gear and Car Seats"></div>
+<div class="card-body">
+<div class="card-tag">Travel</div>
+<div class="card-title">Travel Gear & Car Seats</div>
+<div class="card-desc">Best-in-class car seats and travel systems — selected for maximum safety, innovative design, and effortless daily use.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="baby-clothing.html" class="card">
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Baby+Clothing" alt="Baby Clothing and Accessories"></div>
+<div class="card-body">
+<div class="card-tag">Clothing</div>
+<div class="card-title">Baby Clothing & Accessories</div>
+<div class="card-desc">Ultra-soft bamboo sleepwear, designer rompers, and heirloom knitwear — clothing as premium as your nursery.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="playtime.html" class="card">
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Playtime" alt="Playtime and Activity"></div>
+<div class="card-body">
+<div class="card-tag">Play</div>
+<div class="card-title">Playtime & Activity</div>
+<div class="card-desc">Expert-designed play gyms, premium mats, and smart bouncers that support your baby's development at every stage.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="diapering.html" class="card">
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Diapering" alt="Diapering Essentials"></div>
+<div class="card-body">
+<div class="card-tag">Diapering</div>
+<div class="card-title">Diapering Essentials</div>
+<div class="card-desc">Luxury diaper bags that don't look like diaper bags — beautifully designed, perfectly organized, built to last for years.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+</div>
+
+<!-- DIVIDER -->
+<div class="section-divider">
+<div class="divider-label">Our Top Categories</div>
+</div>
+
+<!-- 4 CLASSIC CATEGORIES -->
+<div class="grid">
+
+<a href="safe-sleep.html" class="card">
+<div class="card-image"><img src="https://i.postimg.cc/SNhdt4YT/Chat-GPT-Image-Mar-21-2026-03-52-56-PM.png" alt="Safe Sleep Essentials"></div>
+<div class="card-body">
+<div class="card-tag">Sleep</div>
+<div class="card-title">Safe Sleep Essentials</div>
+<div class="card-desc">The finest cribs, breathable mattresses, and sleep solutions — rigorously selected for safety and modern nursery design.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="furniture.html" class="card">
+<div class="card-image"><img src="https://i.postimg.cc/jqXntYkm/Chat-GPT-Image-Mar-21-2026-03-57-17-PM.png" alt="Nursery Furniture"></div>
+<div class="card-body">
+<div class="card-tag">Furniture</div>
+<div class="card-title">Nursery Furniture</div>
+<div class="card-desc">Timeless, comfortable pieces crafted for modern nursery spaces — where function meets refined design.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="monitoring-safety.html" class="card">
+<div class="card-image"><img src="https://i.postimg.cc/Jnt7LSD4/Chat-GPT-Image-Mar-21-2026-04-12-06-PM.png" alt="Monitoring and Safety"></div>
+<div class="card-body">
+<div class="card-tag">Monitoring</div>
+<div class="card-title">Monitoring & Safety</div>
+<div class="card-desc">Clinical-grade monitors and smart safety tools — giving you real-time peace of mind, day and night.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+<a href="air-quality.html" class="card">
+<div class="card-image"><img src="https://i.postimg.cc/QCYXV3Pp/Chat-GPT-Image-Mar-21-2026-04-31-45-PM.png" alt="Air Quality and Comfort"></div>
+<div class="card-body">
+<div class="card-tag">Wellness</div>
+<div class="card-title">Air Quality & Comfort</div>
+<div class="card-desc">Premium air purifiers, humidifiers, and comfort essentials that ensure your baby always breathes clean, healthy air.</div>
+<div class="card-link">Explore collection <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg></div>
+</div>
+</a>
+
+</div>
+</div>
+
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="inspiration.html">Inspiration</a>
+<a href="contact.html">Contact</a>
+</div>
+<div class="footer-disclaimer">As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg></button>
+
+<script>
+const btn=document.getElementById('scrollTop');
+window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>300);});
+function toggleMenu(){var menu=document.getElementById('mobileMenu');var overlay=document.getElementById('menuOverlay');var hamburger=document.getElementById('hamburger');var isOpen=menu.classList.contains('open');if(isOpen){menu.classList.remove('open');overlay.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}else{menu.classList.add('open');overlay.classList.add('open');hamburger.classList.add('open');document.body.style.overflow='hidden';}}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('menuOverlay').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+</script>
+</body>
+</html>
