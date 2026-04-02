@@ -7,14 +7,33 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
+/* ── HERO WITH OVERLAY ── */
 .hero{max-width:1200px;margin:auto;padding:10px 40px 80px;}
-.hero-inner{background:#fff;border-radius:36px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.07);}
-.hero-image img{width:100%;height:auto;display:block;}
-.hero-content{padding:60px 70px 70px;display:grid;grid-template-columns:1fr auto;align-items:end;gap:40px;}
-.hero-content h1{font-family:'Cormorant Garamond',serif;font-size:54px;font-weight:600;line-height:1.1;margin-bottom:20px;}
-.hero-content p{font-size:18px;line-height:1.7;color:#5c524a;max-width:560px;}
-.hero-cta{text-align:right;flex-shrink:0;}
-.hero-micro{margin-top:12px;font-size:12px;color:#8a8076;text-align:right;}
+.hero-inner{position:relative;border-radius:36px;overflow:hidden;box-shadow:0 25px 60px rgba(0,0,0,0.12);}
+.hero-image img{width:100%;height:580px;object-fit:cover;display:block;}
+.hero-image::after{
+content:'';position:absolute;inset:0;
+background:linear-gradient(to bottom,rgba(20,15,10,0.1) 0%,rgba(20,15,10,0.35) 45%,rgba(20,15,10,0.75) 100%);
+}
+.hero-image{position:relative;}
+.hero-content{
+position:absolute;bottom:0;left:0;right:0;
+padding:60px 70px;
+}
+.hero-content h1{
+font-family:'Cormorant Garamond',serif;
+font-size:58px;font-weight:600;line-height:1.1;
+color:#fff;margin-bottom:14px;max-width:640px;
+}
+.hero-content p{
+font-size:17px;line-height:1.7;
+color:rgba(255,255,255,0.80);
+max-width:500px;margin-bottom:32px;
+}
+.hero-cta{display:flex;align-items:center;gap:20px;flex-wrap:wrap;}
+.hero-micro{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:0.04em;}
+
+/* ── CATEGORIES ── */
 .categories{max-width:1200px;margin:auto;padding:0 40px 60px;}
 .section-header{margin-bottom:60px;}
 .section-header h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:600;margin-bottom:16px;}
@@ -31,56 +50,36 @@
 .card-link{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:#2f2a26;transition:gap .2s;}
 .card-link:hover{gap:12px;}
 .card-link svg{width:16px;height:16px;}
-.all-categories-btn{
-max-width:1200px;margin:0 auto 100px;padding:0 40px;
-text-align:center;
-}
+
+/* ── ALL CATEGORIES BTN ── */
+.all-categories-btn{max-width:1200px;margin:0 auto 100px;padding:0 40px;text-align:center;}
 .btn-outline{
 display:inline-flex;align-items:center;gap:10px;
-border:2px solid #2f2a26;
-color:#2f2a26;
-padding:16px 40px;
-border-radius:16px;
-font-weight:600;
-font-size:15px;
+border:2px solid #2f2a26;color:#2f2a26;
+padding:16px 40px;border-radius:16px;
+font-weight:600;font-size:15px;
 transition:all .25s ease;
 }
-.btn-outline:hover{
-background:#2f2a26;
-color:#F5F1EB;
-transform:translateY(-3px);
-}
+.btn-outline:hover{background:#2f2a26;color:#F5F1EB;transform:translateY(-3px);}
 .btn-outline svg{width:16px;height:16px;}
+
+/* ── INSPIRATION BANNER ── */
 .inspiration-banner{max-width:1200px;margin:0 auto 100px;padding:0 40px;}
 .inspiration-inner{background:#2f2a26;border-radius:28px;padding:60px 70px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:40px;}
 .inspiration-inner h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:600;color:#F5F1EB;margin-bottom:14px;}
 .inspiration-inner p{font-size:16px;color:#a89e94;line-height:1.7;max-width:560px;}
 .btn-light{display:inline-block;background:#F5F1EB;color:#2f2a26;padding:18px 40px;border-radius:16px;font-weight:600;font-size:15px;transition:all .25s ease;white-space:nowrap;flex-shrink:0;}
 .btn-light:hover{background:#fff;transform:translateY(-3px);}
-/* INSPIRATION BAR */
-.inspo-bar{
-display:flex;align-items:center;justify-content:center;gap:10px;
-background:#2f2a26;
-color:#F5F1EB;
-padding:14px 24px;
-font-size:13px;font-weight:500;
-letter-spacing:0.02em;
-text-decoration:none;
-transition:background .2s;
-}
-.inspo-bar:hover{background:#1a1714;}
-.inspo-bar svg{width:14px;height:14px;flex-shrink:0;opacity:0.7;}
-.inspo-dot{
-width:7px;height:7px;border-radius:50%;
-background:#C4D0C1;flex-shrink:0;
-}
+
+/* ── METHODOLOGY ── */
 .methodology{max-width:1200px;margin:auto;padding:80px 40px 100px;}
+
+/* ── RESPONSIVE ── */
 @media(max-width:900px){
 .hero{padding:10px 20px 60px;}
-.hero-content{padding:36px 28px 40px;grid-template-columns:1fr;}
+.hero-image img{height:420px;}
+.hero-content{padding:32px 28px;}
 .hero-content h1{font-size:36px;}
-.hero-cta{text-align:left;}
-.hero-micro{text-align:left;}
 .categories{padding:0 20px 60px;}
 .grid{grid-template-columns:1fr;}
 .all-categories-btn{padding:0 20px;margin-bottom:70px;}
@@ -92,24 +91,20 @@ background:#C4D0C1;flex-shrink:0;
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
 <script>
-window.dataLayer = window.dataLayer || [];
+window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-NN6HJ5XYS6');
+gtag('js',new Date());
+gtag('config','G-NN6HJ5XYS6');
 </script>
 </head>
 <body>
 
 <!-- HAMBURGER MENU OVERLAY -->
 <div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
-
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
 <div class="menu-header">
 <span class="menu-logo">Little Haven</span>
-<button class="menu-close" onclick="closeMenu()">
-<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-</button>
+<button class="menu-close" onclick="closeMenu()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
 </div>
 <div class="menu-body">
 <a class="menu-link" href="index.html" onclick="closeMenu()">Home</a>
@@ -142,28 +137,20 @@ gtag('config', 'G-NN6HJ5XYS6');
 </button>
 </nav>
 
-<!-- INSPIRATION BAR -->
-<a href="inspiration.html" class="inspo-bar">
-<span class="inspo-dot"></span>
-Find Your Nursery Style &nbsp;—&nbsp; Scandinavian, Boho, Minimalist &amp; Cottagecore
-<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-</a>
-
-<!-- HERO -->
+<!-- HERO WITH OVERLAY -->
 <section class="hero">
 <div class="hero-inner">
 <div class="hero-image">
 <img src="https://i.postimg.cc/ydp3HFLs/Chat-GPT-Image-Mar-21-2026-03-41-16-PM.png" alt="Minimal modern nursery interior">
 </div>
 <div class="hero-content">
-<div>
 <h1>The Finest Picks for Your Baby's First Space</h1>
 <p>Expert-curated nursery essentials selected for safety, design, and lasting quality — because your baby deserves nothing less.</p>
-</div>
 <div class="hero-cta">
 <a class="btn-dark" href="#categories">Explore Essentials</a>
-<div class="hero-micro">Research-backed · Independently curated</div>
+<a class="btn-light" href="inspiration.html">Find Your Style</a>
 </div>
+<div class="hero-micro" style="margin-top:16px;">Research-backed · Independently curated</div>
 </div>
 </div>
 </section>
@@ -178,9 +165,7 @@ Find Your Nursery Style &nbsp;—&nbsp; Scandinavian, Boho, Minimalist &amp; Cot
 <div class="grid">
 
 <a href="safe-sleep.html" class="card">
-<div class="card-image">
-<img src="https://i.postimg.cc/SNhdt4YT/Chat-GPT-Image-Mar-21-2026-03-52-56-PM.png" alt="Premium nursery crib">
-</div>
+<div class="card-image"><img src="https://i.postimg.cc/SNhdt4YT/Chat-GPT-Image-Mar-21-2026-03-52-56-PM.png" alt="Premium nursery crib"></div>
 <div class="card-body">
 <div class="card-tag">Sleep</div>
 <div class="card-title">Safe Sleep Essentials</div>
@@ -190,9 +175,7 @@ Find Your Nursery Style &nbsp;—&nbsp; Scandinavian, Boho, Minimalist &amp; Cot
 </a>
 
 <a href="furniture.html" class="card">
-<div class="card-image">
-<img src="https://i.postimg.cc/jqXntYkm/Chat-GPT-Image-Mar-21-2026-03-57-17-PM.png" alt="Modern nursery furniture">
-</div>
+<div class="card-image"><img src="https://i.postimg.cc/jqXntYkm/Chat-GPT-Image-Mar-21-2026-03-57-17-PM.png" alt="Modern nursery furniture"></div>
 <div class="card-body">
 <div class="card-tag">Furniture</div>
 <div class="card-title">Nursery Furniture</div>
@@ -202,9 +185,7 @@ Find Your Nursery Style &nbsp;—&nbsp; Scandinavian, Boho, Minimalist &amp; Cot
 </a>
 
 <a href="travel-gear.html" class="card">
-<div class="card-image">
-<img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Travel+Gear" alt="Travel Gear and Car Seats">
-</div>
+<div class="card-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Travel+Gear" alt="Travel Gear and Car Seats"></div>
 <div class="card-body">
 <div class="card-tag">Travel</div>
 <div class="card-title">Travel Gear & Car Seats</div>
@@ -214,9 +195,7 @@ Find Your Nursery Style &nbsp;—&nbsp; Scandinavian, Boho, Minimalist &amp; Cot
 </a>
 
 <a href="monitoring-safety.html" class="card">
-<div class="card-image">
-<img src="https://i.postimg.cc/Jnt7LSD4/Chat-GPT-Image-Mar-21-2026-04-12-06-PM.png" alt="Premium baby monitor">
-</div>
+<div class="card-image"><img src="https://i.postimg.cc/Jnt7LSD4/Chat-GPT-Image-Mar-21-2026-04-12-06-PM.png" alt="Premium baby monitor"></div>
 <div class="card-body">
 <div class="card-tag">Monitoring</div>
 <div class="card-title">Monitoring & Safety</div>
@@ -322,15 +301,13 @@ As an Amazon Associate, Little Haven earns from qualifying purchases. When you c
 </button>
 
 <script>
-const btn = document.getElementById('scrollTop');
-window.addEventListener('scroll', function(){
-btn.classList.toggle('visible', window.scrollY > 300);
-});
+const btn=document.getElementById('scrollTop');
+window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>300);});
 function toggleMenu(){
-var menu = document.getElementById('mobileMenu');
-var overlay = document.getElementById('menuOverlay');
-var hamburger = document.getElementById('hamburger');
-var isOpen = menu.classList.contains('open');
+var menu=document.getElementById('mobileMenu');
+var overlay=document.getElementById('menuOverlay');
+var hamburger=document.getElementById('hamburger');
+var isOpen=menu.classList.contains('open');
 if(isOpen){menu.classList.remove('open');overlay.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}
 else{menu.classList.add('open');overlay.classList.add('open');hamburger.classList.add('open');document.body.style.overflow='hidden';}
 }
@@ -341,6 +318,5 @@ document.getElementById('hamburger').classList.remove('open');
 document.body.style.overflow='';
 }
 </script>
-
 </body>
 </html>
