@@ -57,6 +57,23 @@ transform:translateY(-3px);
 .inspiration-inner p{font-size:16px;color:#a89e94;line-height:1.7;max-width:560px;}
 .btn-light{display:inline-block;background:#F5F1EB;color:#2f2a26;padding:18px 40px;border-radius:16px;font-weight:600;font-size:15px;transition:all .25s ease;white-space:nowrap;flex-shrink:0;}
 .btn-light:hover{background:#fff;transform:translateY(-3px);}
+/* INSPIRATION BAR */
+.inspo-bar{
+display:flex;align-items:center;justify-content:center;gap:10px;
+background:#2f2a26;
+color:#F5F1EB;
+padding:14px 24px;
+font-size:13px;font-weight:500;
+letter-spacing:0.02em;
+text-decoration:none;
+transition:background .2s;
+}
+.inspo-bar:hover{background:#1a1714;}
+.inspo-bar svg{width:14px;height:14px;flex-shrink:0;opacity:0.7;}
+.inspo-dot{
+width:7px;height:7px;border-radius:50%;
+background:#C4D0C1;flex-shrink:0;
+}
 .methodology{max-width:1200px;margin:auto;padding:80px 40px 100px;}
 @media(max-width:900px){
 .hero{padding:10px 20px 60px;}
@@ -125,6 +142,13 @@ gtag('config', 'G-NN6HJ5XYS6');
 </button>
 </nav>
 
+<!-- INSPIRATION BAR -->
+<a href="inspiration.html" class="inspo-bar">
+<span class="inspo-dot"></span>
+Find Your Nursery Style &nbsp;—&nbsp; Scandinavian, Boho, Minimalist &amp; Cottagecore
+<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+</a>
+
 <!-- HERO -->
 <section class="hero">
 <div class="hero-inner">
@@ -148,7 +172,7 @@ gtag('config', 'G-NN6HJ5XYS6');
 <section class="categories" id="categories">
 <div class="section-header">
 <div class="section-label">Most Popular</div>
-<h2>Our Top Categories</h2>
+<h2>Top Picks by Our Readers</h2>
 <p>The categories parents visit most — curated, tested, and trusted by thousands of families building their perfect nursery.</p>
 </div>
 <div class="grid">
