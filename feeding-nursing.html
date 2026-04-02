@@ -1,0 +1,176 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feeding & Nursing — Little Haven</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+.container{max-width:1100px;margin:auto;padding:40px 40px 100px;}
+.page-header{margin-bottom:50px;}
+.badge{display:inline-block;background:#C4D0C1;color:#2f2a26;font-size:11px;font-weight:600;padding:5px 14px;border-radius:20px;margin-bottom:16px;letter-spacing:0.05em;text-transform:uppercase;}
+.page-header h1{font-family:'Cormorant Garamond',serif;font-size:52px;line-height:1.15;margin-bottom:16px;}
+.page-header p{font-size:18px;line-height:1.7;color:#4b433d;max-width:780px;}
+.affiliate-note{font-size:13px;color:#8a8076;margin-bottom:40px;padding:12px 18px;background:#eee8e0;border-radius:10px;display:inline-block;}
+.products{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:80px;}
+.product{background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 15px 40px rgba(0,0,0,0.07);transition:all .3s ease;display:flex;flex-direction:column;}
+.product:hover{transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,0.11);}
+.product-image img{width:100%;height:320px;object-fit:cover;display:block;transition:transform .4s ease;}
+.product:hover .product-image img{transform:scale(1.03);}
+.product-body{padding:28px;flex:1;display:flex;flex-direction:column;}
+.product-rank{font-size:11px;font-weight:600;color:#8a9e87;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;}
+.product-body h3{font-size:20px;font-weight:600;margin-bottom:6px;}
+.product-brand{font-size:12px;color:#8a8076;margin-bottom:14px;}
+.product-body p{font-size:14px;color:#5c524a;line-height:1.65;margin-bottom:18px;flex:1;}
+.product-features{list-style:none;padding:0;margin:0 0 24px 0;}
+.product-features li{font-size:13px;color:#5c524a;padding:7px 0;border-bottom:1px solid #f0ece4;display:flex;align-items:center;gap:8px;}
+.product-features li:last-child{border-bottom:none;}
+.product-features li::before{content:'';width:6px;height:6px;border-radius:50%;background:#C4D0C1;flex-shrink:0;}
+.why-section{margin-bottom:80px;}
+.compare-section h2{font-family:'Cormorant Garamond',serif;font-size:36px;margin-bottom:28px;}
+@media(max-width:900px){.container{padding:30px 20px 80px;}.products{grid-template-columns:1fr;}.page-header h1{font-size:36px;}}
+</style>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-NN6HJ5XYS6');</script>
+</head>
+<body>
+<div class="menu-overlay" id="menuOverlay" onclick="closeMenu()"></div>
+<div class="mobile-menu" id="mobileMenu">
+<div class="menu-header">
+<span class="menu-logo">Little Haven</span>
+<button class="menu-close" onclick="closeMenu()"><svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+</div>
+<div class="menu-body">
+<a class="menu-link" href="index.html" onclick="closeMenu()">Home</a>
+<div class="menu-divider"></div>
+<div class="menu-section-title">Categories</div>
+<a class="menu-cat" href="safe-sleep.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Safe Sleep Essentials</a>
+<a class="menu-cat" href="furniture.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Nursery Furniture</a>
+<a class="menu-cat" href="monitoring-safety.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Monitoring & Safety</a>
+<a class="menu-cat" href="air-quality.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Air Quality & Comfort</a>
+<a class="menu-cat" href="bath-time.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Bath Time Essentials</a>
+<a class="menu-cat" href="feeding-nursing.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Feeding & Nursing</a>
+<a class="menu-cat" href="travel-gear.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Travel Gear & Car Seats</a>
+<a class="menu-cat" href="baby-clothing.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Baby Clothing & Accessories</a>
+<a class="menu-cat" href="playtime.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Playtime & Activity</a>
+<a class="menu-cat" href="diapering.html" onclick="closeMenu()"><span class="menu-cat-dot"></span>Diapering Essentials</a>
+<div class="menu-divider"></div>
+<a class="menu-link" href="inspiration.html" onclick="closeMenu()">Inspiration</a>
+<a class="menu-link" href="about.html" onclick="closeMenu()">About</a>
+<a class="menu-link" href="contact.html" onclick="closeMenu()">Contact</a>
+</div>
+<div class="menu-footer">As an Amazon Associate, Little Haven earns from qualifying purchases.</div>
+</div>
+<nav class="nav">
+<a class="nav-back" href="index.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3L5 8l5 5"/></svg>Back</a>
+<div class="nav-logo"><a href="index.html">Little Haven</a></div>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+</nav>
+<div class="container">
+<div class="page-header">
+<div class="badge">Editor's Choice 2025</div>
+<h1>Premium Feeding & Nursing Essentials</h1>
+<p>Three expert-selected products that make feeding easier, more comfortable, and more connected — from hands-free pumping to the high chair your baby will use for years.</p>
+</div>
+<div class="affiliate-note">Our recommendations include affiliate links — you pay the same price on Amazon, we may earn a small commission.</div>
+<div class="products">
+
+<div class="product">
+<div class="product-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Elvie+Stride+Pump" alt="Elvie Stride Wearable Breast Pump"></div>
+<div class="product-body">
+<div class="product-rank">#1 Best Breast Pump</div>
+<h3>Elvie Stride Wearable Breast Pump</h3>
+<div class="product-brand">by Elvie</div>
+<p>The ultimate hands-free breast pump — silent, wearable, and discreet enough to use anywhere. Hospital-grade suction in a device that fits inside your bra, giving new mothers the freedom to pump while moving through their day.</p>
+<ul class="product-features">
+<li>100% hands-free — wears inside bra</li>
+<li>Near-silent — use anywhere discreetly</li>
+<li>Hospital-grade suction technology</li>
+<li>App-controlled — track sessions easily</li>
+</ul>
+<a class="btn-dark" href="ASIN_HERE">View on Amazon</a>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Stokke+Tripp+Trapp" alt="Stokke Tripp Trapp High Chair"></div>
+<div class="product-body">
+<div class="product-rank">#2 Best High Chair</div>
+<h3>Stokke Tripp Trapp High Chair</h3>
+<div class="product-brand">by Stokke</div>
+<p>The iconic Scandinavian high chair that converts from baby to adult — designed to grow with your child for a lifetime of meals together at the family table. Legendary durability, timeless design, and unmatched versatility.</p>
+<ul class="product-features">
+<li>Converts from newborn to adult</li>
+<li>Adjustable seat & footrest</li>
+<li>50+ year legacy — iconic design</li>
+<li>Easy to clean — dishwasher-safe parts</li>
+</ul>
+<a class="btn-dark" href="ASIN_HERE">View on Amazon</a>
+</div>
+</div>
+
+<div class="product">
+<div class="product-image"><img src="https://placehold.co/800x600/F5F1EB/2f2a26?text=Comotomo+Bottles" alt="Comotomo Baby Bottles"></div>
+<div class="product-body">
+<div class="product-rank">#3 Best Baby Bottles</div>
+<h3>Comotomo Natural Feel Baby Bottles</h3>
+<div class="product-brand">by Comotomo</div>
+<p>The most breast-like baby bottle on the market — soft silicone skin mimics the natural feel of breastfeeding, making the transition from breast to bottle seamless. Preferred by lactation consultants worldwide.</p>
+<ul class="product-features">
+<li>Soft silicone — mimics breast feel</li>
+<li>Anti-colic dual air vents</li>
+<li>Wide neck — easy to clean</li>
+<li>Heat-resistant up to 250°F</li>
+</ul>
+<a class="btn-dark" href="ASIN_HERE">View on Amazon</a>
+</div>
+</div>
+
+</div>
+<div class="why-section">
+<div class="content-card">
+<h2>Why Premium Feeding Products Matter</h2>
+<p class="lead">Feeding is the most frequent activity in your baby's first year. The right products reduce stress, support bonding, and make every feeding — whether breast, bottle, or solid — a positive experience.</p>
+<div class="method-steps">
+<div class="step"><div class="step-num">01</div><h4>Support the Mother</h4><p>A hands-free pump gives nursing mothers their freedom back — pumping doesn't have to mean stopping everything. Technology like the Elvie Stride makes it truly wearable.</p></div>
+<div class="step"><div class="step-num">02</div><h4>Build Good Habits Early</h4><p>The Tripp Trapp positions your baby at the table from day one — creating healthy eating posture and family mealtime connection that lasts a lifetime.</p></div>
+<div class="step"><div class="step-num">03</div><h4>Ease the Transition</h4><p>The right bottle makes breast-to-bottle transitions smoother — reducing feeding refusal and keeping your baby comfortable whether feeding from breast or bottle.</p></div>
+</div>
+</div>
+</div>
+<div class="compare-section">
+<h2>Quick Comparison</h2>
+<table class="compare-table">
+<thead><tr><th>Product</th><th>Best For</th><th>Key Feature</th></tr></thead>
+<tbody>
+<tr><td>Elvie Stride Pump</td><td>Nursing mothers on the go</td><td>Hands-free, silent, wearable</td></tr>
+<tr><td>Stokke Tripp Trapp</td><td>Long-term family meals</td><td>Converts newborn to adult</td></tr>
+<tr><td>Comotomo Bottles</td><td>Breast-to-bottle transition</td><td>Soft silicone, breast-like feel</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+<footer class="footer">
+<div class="footer-inner">
+<div class="footer-logo">Little Haven</div>
+<div class="footer-links">
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
+<a href="index.html">Home</a>
+</div>
+<div class="footer-disclaimer">As an Amazon Associate, Little Haven earns from qualifying purchases. When you click our links and make a purchase, we may receive a small commission at no extra cost to you.</div>
+<div class="footer-copy">© 2025 Little Haven. All rights reserved.</div>
+</div>
+</footer>
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})"><svg viewBox="0 0 24 24"><path d="M18 15l-6-6-6 6"/></svg></button>
+<script>
+const btn=document.getElementById('scrollTop');
+window.addEventListener('scroll',function(){btn.classList.toggle('visible',window.scrollY>300);});
+function toggleMenu(){var menu=document.getElementById('mobileMenu');var overlay=document.getElementById('menuOverlay');var hamburger=document.getElementById('hamburger');var isOpen=menu.classList.contains('open');if(isOpen){menu.classList.remove('open');overlay.classList.remove('open');hamburger.classList.remove('open');document.body.style.overflow='';}else{menu.classList.add('open');overlay.classList.add('open');hamburger.classList.add('open');document.body.style.overflow='hidden';}}
+function closeMenu(){document.getElementById('mobileMenu').classList.remove('open');document.getElementById('menuOverlay').classList.remove('open');document.getElementById('hamburger').classList.remove('open');document.body.style.overflow='';}
+</script>
+</body>
+</html>
