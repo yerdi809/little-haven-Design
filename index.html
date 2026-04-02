@@ -71,6 +71,54 @@ transition:all .25s ease;
 .btn-light{display:inline-block;background:#F5F1EB;color:#2f2a26;padding:18px 40px;border-radius:16px;font-weight:600;font-size:15px;transition:all .25s ease;white-space:nowrap;flex-shrink:0;}
 .btn-light:hover{background:#fff;transform:translateY(-3px);}
 
+
+/* ── EMAIL SECTION ── */
+.email-section{
+max-width:1200px;margin:0 auto 80px;padding:0 40px;
+}
+.email-inner{
+background:#F5F1EB;
+border-radius:28px;
+padding:60px 70px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:60px;
+}
+.email-inner h2{
+font-family:'Cormorant Garamond',serif;
+font-size:38px;font-weight:600;
+line-height:1.2;margin-bottom:12px;color:#2f2a26;
+}
+.email-inner p{
+font-size:16px;color:#6b6158;line-height:1.7;
+}
+.email-form-wrap{}
+.email-form{display:flex;flex-direction:column;gap:12px;}
+.email-form input[type="email"]{
+padding:16px 20px;
+border:1.5px solid #e0d8ce;
+border-radius:12px;
+font-size:15px;font-family:'Inter',sans-serif;
+outline:none;transition:border .2s;
+background:#fff;
+}
+.email-form input[type="email"]:focus{border-color:#C4D0C1;}
+.email-form button{
+background:#2f2a26;color:#F5F1EB;
+padding:16px 28px;border-radius:12px;
+border:none;cursor:pointer;
+font-size:15px;font-weight:600;font-family:'Inter',sans-serif;
+transition:background .2s;
+}
+.email-form button:hover{background:#1a1714;}
+.email-note{font-size:12px;color:#a89e94;margin-top:4px;}
+@media(max-width:900px){
+.email-section{padding:0 20px;margin-bottom:60px;}
+.email-inner{grid-template-columns:1fr;padding:40px 28px;gap:32px;}
+.email-inner h2{font-size:30px;}
+}
+
 /* ── METHODOLOGY ── */
 .methodology{max-width:1200px;margin:auto;padding:80px 40px 100px;}
 
@@ -87,6 +135,82 @@ transition:all .25s ease;
 .inspiration-banner{padding:0 20px;margin-bottom:70px;}
 .inspiration-inner{padding:36px 28px;grid-template-columns:1fr;}
 .inspiration-inner h2{font-size:32px;}
+}
+
+/* ── EMAIL POPUP ── */
+.popup-overlay{
+position:fixed;inset:0;
+background:rgba(0,0,0,0.5);
+z-index:2000;
+display:flex;align-items:center;justify-content:center;
+padding:20px;
+opacity:0;visibility:hidden;
+transition:all .3s ease;
+}
+.popup-overlay.open{opacity:1;visibility:visible;}
+.popup-box{
+background:#fff;
+border-radius:28px;
+padding:56px 52px;
+max-width:520px;width:100%;
+position:relative;
+box-shadow:0 30px 80px rgba(0,0,0,0.15);
+text-align:center;
+transform:translateY(20px);
+transition:transform .3s ease;
+}
+.popup-overlay.open .popup-box{transform:translateY(0);}
+.popup-close{
+position:absolute;top:20px;right:20px;
+width:36px;height:36px;border-radius:50%;
+background:#f5f1eb;border:none;cursor:pointer;
+display:flex;align-items:center;justify-content:center;
+transition:background .2s;
+}
+.popup-close:hover{background:#e8e0d6;}
+.popup-close svg{width:16px;height:16px;stroke:#2f2a26;fill:none;stroke-width:2;stroke-linecap:round;}
+.popup-badge{
+display:inline-block;
+background:#C4D0C1;color:#2f2a26;
+font-size:10px;font-weight:600;
+padding:4px 12px;border-radius:20px;
+letter-spacing:0.08em;text-transform:uppercase;
+margin-bottom:16px;
+}
+.popup-box h2{
+font-family:'Cormorant Garamond',serif;
+font-size:34px;font-weight:600;
+line-height:1.2;margin-bottom:12px;color:#2f2a26;
+}
+.popup-box p{
+font-size:15px;color:#6b6158;
+line-height:1.7;margin-bottom:28px;
+}
+.popup-form{display:flex;gap:10px;flex-wrap:wrap;}
+.popup-form input[type="email"]{
+flex:1;min-width:200px;
+padding:14px 18px;
+border:1.5px solid #e8e0d5;
+border-radius:12px;
+font-size:14px;font-family:'Inter',sans-serif;
+outline:none;transition:border .2s;
+background:#faf8f5;
+}
+.popup-form input[type="email"]:focus{border-color:#C4D0C1;}
+.popup-form button{
+background:#2f2a26;color:#F5F1EB;
+padding:14px 28px;border-radius:12px;
+border:none;cursor:pointer;
+font-size:14px;font-weight:600;font-family:'Inter',sans-serif;
+transition:background .2s;white-space:nowrap;
+}
+.popup-form button:hover{background:#1a1714;}
+.popup-note{font-size:11px;color:#a89e94;margin-top:14px;}
+@media(max-width:600px){
+.popup-box{padding:40px 28px;}
+.popup-box h2{font-size:28px;}
+.popup-form{flex-direction:column;}
+.popup-form input[type="email"],.popup-form button{width:100%;}
 }
 </style>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-NN6HJ5XYS6"></script>
@@ -250,6 +374,26 @@ Explore All 10 Categories
 </div>
 </section>
 
+
+<!-- EMAIL SECTION -->
+<section class="email-section">
+<div class="email-inner">
+<div>
+<div class="section-label" style="margin-bottom:12px;">Weekly Premium Picks</div>
+<h2>Design the Nursery of Your Dreams</h2>
+<p>Join thousands of discerning parents receiving our weekly curated selection of premium baby essentials, honest expert reviews, and stunning nursery inspiration — delivered straight to your inbox.</p>
+</div>
+<div class="email-form-wrap">
+<form class="email-form" action="https://github.us8.list-manage.com/subscribe/post?u=bdea07413b85e93ae701bc3e5&amp;id=19e1989dfe&amp;f_id=004100e0f0" method="post" target="_blank">
+<input type="email" name="EMAIL" placeholder="Enter your email address" required>
+<div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_bdea07413b85e93ae701bc3e5_19e1989dfe" tabindex="-1" value=""></div>
+<button type="submit">Get Weekly Premium Picks</button>
+</form>
+<p class="email-note">We respect your inbox as much as you respect your baby's sleep.</p>
+</div>
+</div>
+</section>
+
 <!-- METHODOLOGY -->
 <section class="methodology">
 <div class="content-card">
@@ -317,5 +461,46 @@ document.getElementById('hamburger').classList.remove('open');
 document.body.style.overflow='';
 }
 </script>
+
+<!-- EMAIL POPUP -->
+<div class="popup-overlay" id="emailPopup" onclick="closePopup(event)">
+<div class="popup-box">
+<button class="popup-close" onclick="dismissPopup()">
+<svg viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+</button>
+<div class="popup-badge">Weekly Premium Picks</div>
+<h2>Design the Nursery of Your Dreams</h2>
+<p>Get weekly hand-picked premium products for your baby's nursery, unbiased reviews, safety tips, and beautiful styling ideas from real parents and experts.</p>
+<form class="popup-form" action="https://github.us8.list-manage.com/subscribe/post?u=bdea07413b85e93ae701bc3e5&amp;id=19e1989dfe&amp;f_id=004100e0f0" method="post" target="_blank">
+<input type="email" name="EMAIL" placeholder="Your email address" required>
+<div style="position:absolute;left:-5000px;" aria-hidden="true"><input type="text" name="b_bdea07413b85e93ae701bc3e5_19e1989dfe" tabindex="-1" value=""></div>
+<button type="submit">Subscribe</button>
+</form>
+<p class="popup-note">We respect your inbox as much as you respect your baby's sleep.</p>
+</div>
+</div>
+
+<script>
+// Show popup after 5 seconds, once per session
+if(!sessionStorage.getItem('popupShown')){
+setTimeout(function(){
+document.getElementById('emailPopup').classList.add('open');
+},5000);
+}
+function closePopup(e){
+if(e.target===document.getElementById('emailPopup')){
+dismissPopup();
+}
+}
+function dismissPopup(){
+document.getElementById('emailPopup').classList.remove('open');
+sessionStorage.setItem('popupShown','true');
+}
+// Close on form submit
+document.querySelector('.popup-form').addEventListener('submit',function(){
+setTimeout(dismissPopup, 500);
+});
+</script>
+
 </body>
 </html>
